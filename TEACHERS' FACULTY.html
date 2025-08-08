@@ -1,73 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <style>
-
-    body {
-        background-color:#002B36;
-        color: #FAFAFA;
-        font-size: 16px;
-        margin:auto;
-        padding:15px;
-        text-align: center;
-        line-height: 1.6;
-    }
-
-    a {
-        color: #FAFAFA;
-    }
-
-    button{
-        margin: 5px;
-        background-color: #002B36;
-        font-size: 16px;
-        color: #FFFFFF;
-        border-color: #feffff;
-        border: none;
-        padding: 10px;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-
-    button:hover {
-        background-color: #f9a825;
-    }
-
-    .line {
-  width: auto;
-  height: 2px;
-  background-color: #f9a825;
-  margin: 20px auto;
-}
-
-        .Font {
-  font-family: 'Poppins', sans-serif;
-  font-style: italic;
-}   
-        .heading {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-        }
-
-    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ratna Bdr. Gurung Govt. Secondary School</title>
+
+    <!-- Font Awesome for hamburger icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+          integrity="sha512-papmWJqZwlZV5tw8GYP2IYmvP3ldAzMY7XqjU0hplOZ1Eh4K8FcuS5TwkAdJ1jTVw1MCuO1PcJHhK+9HxFF6Ug=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        body {
+            background-color: #002B36;
+            color: #FAFAFA;
+            font-size: 16px;
+            margin: auto;
+            padding: 15px;
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        .line {
+            width: auto;
+            height: 2px;
+            background-color: #f9a825;
+            margin: 20px auto;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            color: #FAFAFA;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        a:hover {
+            color: #f9a825;
+        }
+
+        header {
+            position: relative;
+            padding: 0 2rem;
+        }
+
+        .navbar {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .navbar .logo a {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        /* Links for large screens */
+        .navbar .links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        /* Hide the checkbox */
+        #menu-toggle {
+            display: none;
+        }
+
+        /* Hamburger icon */
+        .menu-icon {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #FAFAFA;
+        }
+
+        /* ===== MOBILE MENU ===== */
+        @media (max-width: 768px) {
+            .navbar .links {
+                display: none;
+                flex-direction: column;
+                background-color: #002B36;
+                position: absolute;
+                top: 60px;
+                right: 2rem;
+                width: 200px;
+                padding: 1rem;
+                border-radius: 10px;
+                gap: 1rem;
+                z-index: 100;
+            }
+
+            /* Show menu when checkbox is checked */
+            #menu-toggle:checked + .menu-icon + .links {
+                display: flex;
+            }
+
+            .menu-icon {
+                display: block;
+            }
+        }
+    </style>
 </head>
 <body>
-   <div class="heading"> <p>RATNA BDR. GURGUNG GOVERNMENT SECONDARY SCHOOL, TARPIN<br>
-    Rhenock Tarpin, Pakyong District, Sikkim<br>
-    Contact No: +91 <a href="tel:9239087045">9239087045</a><br>
-    Email ID: <a href="mailto:abhinaypradhanz977@gmail.com">abhinaypradhanz977@gmail.com</a></p></div>
 
-    <a href="index.html"> <button>HOME</button></a>
-    <a href="ABOUT US.html"><button>ABOUT US</button></a>
-    <a href="TEACHERS' FACULTY.html"><button>TEACHERS' FACULTY</button></a>
-    <a href="GALLERY.html"><button>GALLERY</button></a><p>
+<header>
+    <nav class="navbar">
+        <div class="logo"><a href="#">LOGO</a></div>
 
-     <div class="Font"><div class="line"></div>
-        <p>RBGGSST</p>
-        <p>FOR MORE DETAILS CONTACT +91 <a href="tel:9239087045">9239087045</a></p>
-        <p>PAGE DESIGNED BY <b><i>ABHINAY PRADHAN</i></b> FOR INFORMATIONAL PURPOSE ONLY</p></div>
+        <!-- Hidden checkbox for toggle -->
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+
+        <ul class="links">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about-us.html">ABOUT US</a></li>
+            <li><a href="teachers-faculty.html">TEACHERS' FACULTY</a></li>
+            <li><a href="gallery.html">GALLERY</a></li>
+        </ul>
+    </nav>
+</header>
+
+<br>
+
+<main>
+    <p>RATNA BDR. GURUNG GOVERNMENT SECONDARY SCHOOL, TARPIN</p>
+    <p>Rhenock Tarpin, Pakyong District, Sikkim</p>
+    <p>Contact No: +91 <a href="tel:9239087045">9239087045</a></p>
+    <p>Email ID: <a href="mailto:abhinaypradhanz977@gmail.com">abhinaypradhanz977@gmail.com</a></p>
+
+    <div class="line"></div>
+
+    <p>RBGGSST</p>
+    <p>FOR MORE DETAILS CONTACT +91 <a href="tel:9239087045">9239087045</a></p>
+    <p>PAGE DESIGNED BY <b><i>ABHINAY PRADHAN</i></b> FOR INFORMATIONAL PURPOSE ONLY</p>
+</main>
+
 </body>
 </html>
