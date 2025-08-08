@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ratna Bdr. Gurung Govt. Secondary School</title>
 
-    <!-- Font Awesome for hamburger icon -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" 
+          integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" 
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <style>
         * {
@@ -20,7 +22,6 @@
             background-color: #002B36;
             color: #FAFAFA;
             font-size: 16px;
-            margin: auto;
             padding: 15px;
             text-align: center;
             line-height: 1.6;
@@ -77,12 +78,29 @@
             display: none;
         }
 
-        /* Hamburger icon */
+        /* Creative Hamburger Button */
         .menu-icon {
             display: none;
             font-size: 1.5rem;
             cursor: pointer;
-            color: #FAFAFA;
+            color: white;
+            background: linear-gradient(45deg, #f9a825, #ff6f00);
+            padding: 10px 14px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.3);
+        }
+
+        .menu-icon:hover {
+            background: linear-gradient(45deg, #ff6f00, #f9a825);
+            transform: scale(1.1);
+        }
+
+        /* Active effect when menu is open */
+        #menu-toggle:checked + .menu-icon {
+            background: linear-gradient(45deg, #4caf50, #2e7d32);
+            color: white;
+            transform: rotate(90deg);
         }
 
         /* ===== MOBILE MENU ===== */
@@ -99,6 +117,8 @@
                 border-radius: 10px;
                 gap: 1rem;
                 z-index: 100;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+                animation: fadeIn 0.3s ease;
             }
 
             /* Show menu when checkbox is checked */
@@ -110,9 +130,51 @@
                 display: block;
             }
         }
+
+        /* Smooth Fade-in Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Icon styling */
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin-top: 10px;
+        }
+
+        .facebook i {
+            font-size: 2rem;
+            color: #1877F2;
+            transition: color 0.3s ease;
+        }
+
+        .facebook i:hover {
+            color: #f9a825;
+        }
+
+        .call i {
+            font-size: 2rem;
+            color: #4CAF50;
+            transition: color 0.3s ease;
+        }
+
+        .call i:hover {
+            color: #f9a825;
+        }
     </style>
 </head>
 <body>
+
     <header>
     <nav class="navbar">
         <div class="logo"><a href="https://www.facebook.com/share/1EjWCDv4Ub/">RBG GOVERNMENT SECONDARY SCHOOL TARPIN</a></div>
@@ -131,20 +193,32 @@
         </ul>
     </nav>
 </header>
-<br>
-
-   <div class="heading"> <p>RATNA BDR. GURGUNG GOVERNMENT SECONDARY SCHOOL, TARPIN<br>
-    Rhenock Tarpin, Pakyong District, Sikkim<br>
-    Contact No: +91 <a href="tel:9239087045">9239087045</a><br>
-    Email ID: <a href="mailto:abhinaypradhanz977@gmail.com">abhinaypradhanz977@gmail.com</a></p></div>
-
     <p><img src="MAIN.JPG.jpg" width="300" style="height: auto;"></p>
     <p><img src="MAIN2.JPG.jpg" width="300" style="height: auto;"></p>
+    
+    <footer>
+<br>
+    <p>RBGGSST</p>
 
-    <div class="Font"> <div class="line"></div>
-        <p>RBGGSST</p>
-        <p>FOR MORE DETAILS CONTACT +91 <a href="tel:9239087045">9239087045</a></p>
-        <p>PAGE DESIGNED BY <b><i>ABHINAY PRADHAN</i></b> FOR INFORMATIONAL PURPOSE ONLY</p></div>
-
+    <div class="social-icons">
+        <div class="facebook">
+            <a href="https://www.facebook.com/share/1EjWCDv4Ub/" target="_blank">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+        </div>
+        <div class="call">
+            <a href="tel:9239087045">
+                <i class="fa-solid fa-phone"></i>
+            </a>
+        </div>
+    </div>
+    <p>
+        PAGE DESIGNED BY 
+        <a href="https://wa.me/9239087045" target="_blank">
+            <b><i>ABHINAY PRADHAN</i></b>
+        </a> 
+        FOR INFORMATIONAL PURPOSE ONLY
+    </p>
+    </footer>
 </body>
 </html>
