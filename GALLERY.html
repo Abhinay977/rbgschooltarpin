@@ -5,198 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ratna Bdr. Gurung Govt. Secondary School</title>
 
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" 
-          integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" 
-          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" crossorigin="anonymous">
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Open Sans', sans-serif;
-        }
-
-        body {
-            background-color: #002B36;
-            color: #FAFAFA;
-            font-size: 16px;
-            padding: 15px;
-            text-align: center;
-            line-height: 1.6;
-        }
-
-        .line {
-            width: auto;
-            height: 2px;
-            background-color: #f9a825;
-            margin: 20px auto;
-        }
-
-        li {
-            list-style: none;
-        }
-
-        a {
-            color: #FAFAFA;
-            text-decoration: none;
-            font-size: 1rem;
-        }
-
-        a:hover {
-            color: #f9a825;
-        }
-
-        header {
-            position: relative;
-            padding: 0 2rem;
-        }
-
-        .navbar {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .navbar .logo a {
-            font-size: 1.2rem;
-            font-weight: bold;
-        }
-
-        /* Links for large screens */
-        .navbar .links {
-            display: flex;
-            gap: 2rem;
-        }
-
-        /* Hide the checkbox */
-        #menu-toggle {
-            display: none;
-        }
-
-        /* Creative Hamburger Button */
-        .menu-icon {
-            display: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: white;
-            background: linear-gradient(45deg, #f9a825, #ff6f00);
-            padding: 10px 14px;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            box-shadow: 0px 4px 8px rgba(0,0,0,0.3);
-        }
-
-        .menu-icon:hover {
-            background: linear-gradient(45deg, #ff6f00, #f9a825);
-            transform: scale(1.1);
-        }
-
-        /* Active effect when menu is open */
-        #menu-toggle:checked + .menu-icon {
-            background: linear-gradient(45deg, #4caf50, #2e7d32);
-            color: white;
-            transform: rotate(90deg);
-        }
-
-        /* ===== MOBILE MENU ===== */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Open Sans', sans-serif; }
+        body { background-color: #002B36; color: #FAFAFA; font-size: 16px; padding: 15px; text-align: center; line-height: 1.6; }
+        li { list-style: none; }
+        a { color: #FAFAFA; text-decoration: none; font-size: 1rem; }
+        a:hover { color: #f9a825; }
+        header { position: relative; padding: 0 2rem; }
+        .navbar { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+        .navbar .rbg a { font-size: 1.2rem; font-weight: bold; }
+        .navbar .links { display: flex; gap: 2rem; }
+        #menu-toggle { display: none; }
+        .menu-icon { display: none; font-size: 1.5rem; cursor: pointer; color: white; background: linear-gradient(45deg, #f9a825, #ff6f00); padding: 10px 14px; border-radius: 8px; transition: all 0.3s ease; box-shadow: 0px 4px 8px rgba(0,0,0,0.3); }
+        .menu-icon:hover { background: linear-gradient(45deg, #ff6f00, #f9a825); transform: scale(1.1); }
+        #menu-toggle:checked + .menu-icon { background: linear-gradient(45deg, #4caf50, #2e7d32); color: white; transform: rotate(90deg); }
         @media (max-width: 768px) {
-            .navbar .links {
-                display: none;
-                flex-direction: column;
-                background-color: #002B36;
-                position: absolute;
-                top: 60px;
-                right: 2rem;
-                width: 200px;
-                padding: 1rem;
-                border-radius: 10px;
-                gap: 1rem;
-                z-index: 100;
-                box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-                animation: fadeIn 0.3s ease;
-            }
-
-            /* Show menu when checkbox is checked */
-            #menu-toggle:checked + .menu-icon + .links {
-                display: flex;
-            }
-
-            .menu-icon {
-                display: block;
-            }
+            .navbar .links { display: none; flex-direction: column; background-color: #002B36; position: absolute; top: 60px; right: 2rem; width: 200px; padding: 1rem; border-radius: 10px; gap: 1rem; z-index: 100; box-shadow: 0 5px 15px rgba(0,0,0,0.5); animation: fadeIn 0.3s ease; }
+            #menu-toggle:checked + .menu-icon + .links { display: flex; }
+            .menu-icon { display: block; }
+        }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+        .social-icons { display: flex; justify-content: center; align-items: center; gap: 30px; margin-top: 10px; }
+        .facebook i { font-size: 2rem; color: #1877F2; transition: color 0.3s ease; }
+        .facebook i:hover { color: #f9a825; }
+        .call i { font-size: 2rem; color: #4CAF50; transition: color 0.3s ease; }
+        .call i:hover { color: #f9a825; }
+        .container { display: flex; justify-content: center; margin: 40px 20px 0px 20px; }
+        .box { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
+        .dream { display: flex; flex-direction: column; gap: 10px; max-width: 350px; width: 100%; }
+        img { max-width: 100%; height: auto; border-radius: 12px; display: block; cursor: pointer; }
+        @media only screen and (max-width: 500px) {
+            .box { flex-direction: column; align-items: center; }
+            .dream { max-width: 100%; }
         }
 
-        /* Smooth Fade-in Animation */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Icon styling */
-        .social-icons {
-            display: flex;
+        /* Lightbox Styles */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 200;
+            left: 0; top: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.9);
             justify-content: center;
             align-items: center;
-            gap: 30px;
-            margin-top: 10px;
+            flex-direction: column;
         }
-
-        .facebook i {
+        .lightbox img {
+            max-width: 90%;
+            max-height: 80%;
+            border-radius: 8px;
+        }
+        .lightbox .close, .lightbox .prev, .lightbox .next {
+            position: absolute;
+            color: white;
             font-size: 2rem;
-            color: #1877F2;
-            transition: color 0.3s ease;
+            cursor: pointer;
+            user-select: none;
         }
-
-        .facebook i:hover {
-            color: #f9a825;
-        }
-
-        .call i {
-            font-size: 2rem;
-            color: #4CAF50;
-            transition: color 0.3s ease;
-        }
-
-        .call i:hover {
-            color: #f9a825;
-        }
-
-.gallery {
-    display: inline-block;
-    margin: 5px;   
-    padding: 5px;
-    width: 400px; 
-}
-
-.gallery img {
-    width: 100%;
-    height: auto;
-}
+        .lightbox .close { top: 20px; right: 30px; }
+        .lightbox .prev { left: 30px; top: 50%; transform: translateY(-50%); }
+        .lightbox .next { right: 30px; top: 50%; transform: translateY(-50%); }
+        .lightbox .prev:hover, .lightbox .next:hover, .lightbox .close:hover { color: #f9a825; }
     </style>
 </head>
 <body>
 
-    <header>
+<header>
     <nav class="navbar">
-        <div class="logo"><a href="https://www.facebook.com/share/1EjWCDv4Ub/">RBG GOVERNMENT SECONDARY SCHOOL TARPIN</a></div>
-
-        <!-- Hidden checkbox for toggle -->
+        <div class="rbg"><a href="https://www.facebook.com/share/1EjWCDv4Ub/">RBG GOVERNMENT SECONDARY SCHOOL TARPIN</a></div>
         <input type="checkbox" id="menu-toggle">
-        <label for="menu-toggle" class="menu-icon">
-            <i class="fa-solid fa-bars"></i>
-        </label>
-
+        <label for="menu-toggle" class="menu-icon"><i class="fa-solid fa-bars"></i></label>
         <ul class="links">
             <li><a href="index.html">HOME</a></li>
             <li><a href="ABOUT US.html">ABOUT US</a></li>
@@ -205,46 +87,102 @@
         </ul>
     </nav>
 </header>
-<br>
+
 <main>
-        <div class="gallery">
-            <a target="_blank" href="GALLERY/MAIN.webp">
-            <img src="MAIN.webp">
-            </a>
-        </div>
-
-        <div class="gallery">
-             <a target="_blank" href="MAIN2.webp">
-            <img src="MAIN2.webp">
-            </a>
-        </div>
-
-</main>
-    <footer>
-<br>
-    RBGGSST<br>
-
-    <div class="social-icons">
-        <div class="facebook">
-            <a href="https://www.facebook.com/share/1EjWCDv4Ub/" target="_blank">
-                <i class="fa-brands fa-facebook"></i>
-            </a>
-        </div>
-        <div class="call">
-            <a href="tel:9239087045">
-                <i class="fa-solid fa-phone"></i>
-            </a>
+    <div class="container">
+        <div class="box">
+            <div class="dream">
+                <img src="1.webp" alt="School building front view">
+                <img src="2.webp" alt="Students gathered in assembly area">
+                <img src="3.webp" alt="Classroom interior with students">
+                <img src="4.webp" alt="Science laboratory session">
+                <img src="5.webp" alt="Sports day activities">
+                <img src="6.webp" alt="Teachers group photo">
+                <img src="7.webp" alt="Annual cultural program stage">
+                <img src="8.webp" alt="School garden and greenery">
+                <img src="9.webp" alt="Computer lab with students">
+                <img src="10.webp" alt="School entrance gate">
+            </div>
+            <div class="dream">
+                <img src="11.webp" alt="Students playing football">
+                <img src="12.webp" alt="Library interior">
+                <img src="13.webp" alt="Science fair project display">
+                <img src="14.webp" alt="School tour for visitors">
+                <img src="15.webp" alt="Independence Day celebration">
+                <img src="16.webp" alt="Group photo with principal">
+                <img src="17.webp" alt="Art and craft exhibition">
+                <img src="18.webp" alt="Classroom teaching session">
+                <img src="19.webp" alt="School corridor view">
+                <img src="20.webp" alt="Farewell program">
+            </div>
         </div>
     </div>
-<br>
-    
-        PAGE DESIGNED BY 
-        <a href="https://wa.me/9239087045" target="_blank">
-            <b><i>ABHINAY PRADHAN</i></b>
-        </a> 
-        FOR INFORMATIONAL PURPOSE ONLY
-    
-    </footer>
+</main>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+    <span class="close" id="closeBtn">&times;</span>
+    <span class="prev" id="prevBtn">&#10094;</span>
+    <img id="lightboxImg" src="">
+    <span class="next" id="nextBtn">&#10095;</span>
+</div>
+
+<footer>
+    <br>RBGGSST<br>
+    <div class="social-icons">
+        <div class="facebook"><a href="https://www.facebook.com/share/1EjWCDv4Ub/" target="_blank"><i class="fa-brands fa-facebook"></i></a></div>
+        <div class="call"><a href="tel:9239087045"><i class="fa-solid fa-phone"></i></a></div>
+    </div>
+    <br>PAGE DESIGNED BY <a href="https://wa.me/9239087045" target="_blank"><b><i>ABHINAY PRADHAN</i></b></a> FOR INFORMATIONAL PURPOSE ONLY
+</footer>
+
+<script>
+    const images = document.querySelectorAll('.dream img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const closeBtn = document.getElementById('closeBtn');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    let currentIndex = 0;
+
+    function showImage(index) {
+        lightboxImg.src = images[index].src;
+        lightbox.style.display = 'flex';
+        currentIndex = index;
+    }
+
+    images.forEach((img, index) => {
+        img.addEventListener('click', () => showImage(index));
+    });
+
+    closeBtn.addEventListener('click', () => {
+        lightbox.style.display = 'none';
+    });
+
+    prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        showImage(currentIndex);
+    });
+
+    nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % images.length;
+        showImage(currentIndex);
+    });
+
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+            lightbox.style.display = 'none';
+        }
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (lightbox.style.display === 'flex') {
+            if (e.key === 'ArrowLeft') prevBtn.click();
+            if (e.key === 'ArrowRight') nextBtn.click();
+            if (e.key === 'Escape') closeBtn.click();
+        }
+    });
+</script>
+
 </body>
 </html>
-
