@@ -6,9 +6,9 @@
     <title>Ratna Bdr. Gurung Govt. Secondary School</title>
 
     <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" 
-          integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" 
-          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+          integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
 
     <style>
         * {
@@ -27,17 +27,6 @@
             line-height: 1.6;
         }
 
-        .line {
-            width: auto;
-            height: 2px;
-            background-color: #f9a825;
-            margin: 20px auto;
-        }
-
-        li {
-            list-style: none;
-        }
-
         a {
             color: #FAFAFA;
             text-decoration: none;
@@ -49,12 +38,10 @@
         }
 
         header {
-            position: relative;
             padding: 0 2rem;
         }
 
         .navbar {
-            width: 100%;
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
@@ -67,18 +54,16 @@
             font-weight: bold;
         }
 
-        /* Links for large screens */
         .navbar .links {
             display: flex;
             gap: 2rem;
+            list-style: none;
         }
 
-        /* Hide the checkbox */
         #menu-toggle {
             display: none;
         }
 
-        /* Creative Hamburger Button */
         .menu-icon {
             display: none;
             font-size: 1.5rem;
@@ -88,7 +73,7 @@
             padding: 10px 14px;
             border-radius: 8px;
             transition: all 0.3s ease;
-            box-shadow: 0px 4px 8px rgba(0,0,0,0.3);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
         }
 
         .menu-icon:hover {
@@ -96,14 +81,12 @@
             transform: scale(1.1);
         }
 
-        /* Active effect when menu is open */
         #menu-toggle:checked + .menu-icon {
             background: linear-gradient(45deg, #4caf50, #2e7d32);
             color: white;
             transform: rotate(90deg);
         }
 
-        /* ===== MOBILE MENU ===== */
         @media (max-width: 768px) {
             .navbar .links {
                 display: none;
@@ -117,11 +100,10 @@
                 border-radius: 10px;
                 gap: 1rem;
                 z-index: 100;
-                box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
                 animation: fadeIn 0.3s ease;
             }
 
-            /* Show menu when checkbox is checked */
             #menu-toggle:checked + .menu-icon + .links {
                 display: flex;
             }
@@ -131,7 +113,6 @@
             }
         }
 
-        /* Smooth Fade-in Animation */
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -143,7 +124,6 @@
             }
         }
 
-        /* Icon styling */
         .social-icons {
             display: flex;
             justify-content: center;
@@ -164,12 +144,58 @@
 
         .call i {
             font-size: 2rem;
-            color: #4CAF50 ;
+            color: #4CAF50;
             transition: color 0.3s ease;
         }
 
         .call i:hover {
             color: #f9a825;
+        }
+
+        .card {
+            background-color: #006D77; /* Updated background color */
+            border-radius: 6px;
+            display: inline-block;
+            height: 399px;
+            width: 389px;
+            margin-top: 40px;
+            padding-top: 40px;
+        }
+
+        .img {
+            border-radius: 50%;
+            width: 175px;
+            height: 175px;
+        }
+
+        .name {
+            color: #FAFAFA;
+            font-size: 26px;
+        }
+
+        .type {
+            color: #FAFAFA;
+            font-style: italic;
+            font-size: 21px;
+        }
+
+        .btn {
+            outline: none;
+            background: #f9a825;
+            margin-top: 20px;
+            border: none;
+            height: 40px;
+            width: 35%;
+            color: #FAFAFA;
+            font-size: 20px;
+            border-radius: 30px;
+        }
+
+        .btn:hover {
+            color: #FAFAFA;
+            background: #4caf50;
+            transition: all 250ms linear;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -178,10 +204,9 @@
 <header>
     <nav class="navbar">
         <div class="logo">
-            <a href="#">RBG GOVERNMENT SECONDARY SCHOOL TARPIN</a>
+            <a href="https://www.facebook.com/share/1EjWCDv4Ub/">RBG GOVERNMENT SECONDARY SCHOOL TARPIN</a>
         </div>
 
-        <!-- Hidden checkbox for toggle -->
         <input type="checkbox" id="menu-toggle">
         <label for="menu-toggle" class="menu-icon">
             <i class="fa-solid fa-bars"></i>
@@ -195,6 +220,289 @@
         </ul>
     </nav>
 </header>
+
+<main>
+    <div class="card">
+        <img src="DURGA D DAHAL.webp" alt="" class="img">
+        <h2 class="name">DURGA D DAHAL</h2>
+        <h3 class="type">Head Of The INSTITUTION </h3>
+        <button class="btn">View More</button>
+    </div>
+
+     <div class="card">
+        <img src="ATINA SUBBA.webp" alt="" class="img">
+        <h2 class="name">ATINA SUBBA</h2>
+        <h3 class="type">SCHOOL INCHARGE</h3>
+        <button class="btn">View More</button>
+    </div>
+
+     <div class="card">
+        <img src="YADHU PRASHAD SHARMA.webp" alt="" class="img">
+        <h2 class="name">YADHU PRASHAD SHARMA</h2>
+        <h3 class="type">TEACHING STAFF</h3>
+        <button class="btn">View More</button>
+    </div>
+
+    <div class="card">
+        <img src="KALPANA PRADHAN.webp" alt="" class="img">
+        <h2 class="name">KALPANA PRADHAN</h2>
+        <h3 class="type">TEACHING STAFF</h3>
+        <button class="btn">View More</button>
+    </div>
+
+     <div class="card">
+        <img src="GOPAL PRASAD SHARMA.webp" alt="" class="img">
+        <h2 class="name">GOPAL PRASAD SHARMA</h2>
+        <h3 class="type">TEACHING STAFF</h3>
+        <button class="btn">View More</button>
+    </div>
+
+     <div class="card">
+        <img src="DAMBER KUMARI SHARMA.webp" alt="" class="img">
+        <h2 class="name">DAMBER KUMARI SHARMA</h2>
+        <h3 class="type">TEACHING STAFF</h3>
+        <button class="btn">View More</button>
+    </div>
+
+    <div class="card">
+        <img src="DIL KUMARI SHARMA.webp" alt="" class="img">
+        <h2 class="name">DIL KUMARI SHARMA</h2>
+        <h3 class="type">TEACHING STAFF</h3>
+        <button class="btn">View More</button>
+    </div>
+
+    <div class="card">
+        <img src="BISHNU MAYA SHARMA.webp" alt="" class="img">
+        <h2 class="name">BISHNU MAYA SHARMA</h2>
+        <h3 class="type">TEACHING STAFF</h3>
+        <button class="btn">View More</button>
+    </div>
+
+    <div class="card">
+        <img src="LEELA DEVI MISHRA.webp" alt="" class="img">
+        <h2 class="name">LEELA DEVI MISHRA</h2>
+        <h3 class="type">TEACHING STAFF</h3>
+        <button class="btn">View More</button>
+    </div>
+
+    <div class="card">
+        <img src="PARSU RAM SHARMA.webp" alt="" class="img">
+        <h2 class="name">PARSU RAM SHARMA</h2>
+        <h3 class="type">TEACHING STAFF</h3>
+        <button class="btn">View More</button>
+    </div>
+
+    <div class="card">
+        <img src="BHANU GURUNG.webp" alt="" class="img">
+        <h2 class="name">BHANU GURUNG</h2>
+        <h3 class="type">TEACHING STAFF</h3>
+        <button class="btn">View More</button>
+    </div>
+
+    <div class="card">
+        <img src="SACHIN GUGUNG.webp" alt="" class="img">
+        <h2 class="name">SACHIN GUGUNG</h2>
+        <h3 class="type">TEACHING STAFF</h3>
+        <button class="btn">View More</button>
+    </div>
+
+    <div class="card">
+        <img src="MINGMA CHOTEN SHERPA.webp" alt="" class="img">
+        <h2 class="name">MINGMA CHOTEN SHERPA</h2>
+        <h3 class="type">TEACHING STAFF</h3>
+        <button class="btn">View More</button>
+    </div>
+
+    <div class="card">
+        <img src="PRANITA RIZAL.webp" alt="" class="img">
+        <h2 class="name">PRANITA RIZAL</h2>
+        <h3 class="type">TEACHING STAFF</h3>
+        <button class="btn">View More</button>
+    </div>
+
+    <div class="card">
+        <img src="HEMANTH SHARMA.webp" alt="" class="img">
+        <h2 class="name">HEMANTH SHARMA</h2>
+        <h3 class="type">TEACHING STAFF</h3>
+        <button class="btn">View More</button>
+    </div>
+
+    <div class="card">
+        <img src="KAVITA NIROLA.webp" alt="" class="img">
+        <h2 class="name">KAVITA NIROLA</h2>
+        <h3 class="type">TEACHING STAFF</h3>
+        <button class="btn">View More</button>
+    </div>
+
+    <div class="card">
+        <img src="JANUKA THAPA CHETTRI.webp" alt="" class="img">
+        <h2 class="name">JANUKA THAPA CHETTRI</h2>
+        <h3 class="type">TEACHING STAFF</h3>
+        <button class="btn">View More</button>
+    </div>
+
+    <div class="card">
+        <img src="TSHERING LHAMU SHERPA.webp" alt="" class="img">
+        <h2 class="name">TSHERING LHAMU SHERPA </h2>
+        <h3 class="type">TEACHING STAFF</h3>
+        <button class="btn">View More</button>
+    </div>
+
+    <div class="card">
+        <img src="KARISHMA CHETTRI.webp" alt="" class="img">
+        <h2 class="name">KARISHMA CHETTRI</h2>
+        <h3 class="type">TEACHING STAFF</h3>
+        <button class="btn">View More</button>
+    </div>
+
+    <div class="card">
+        <img src="MANYLUM TSHERING LEPCHA.webp" alt="" class="img">
+        <h2 class="name">MANYLUM TSHERING LEPCHA</h2>
+        <h3 class="type">TEACHING STAFF</h3>
+        <button class="btn">View More</button>
+    </div>
+
+    <div class="card">
+        <img src="LALIMAYA MANGAR.webp" alt="" class="img">
+        <h2 class="name">LALIMAYA MANGAR</h2>
+        <h3 class="type">TEACHING STAFF</h3>
+        <button class="btn">View More</button>
+    </div>
+
+    <div class="card">
+        <img src="BUDDHA BIR SUBBA.webp" alt="" class="img">
+        <h2 class="name">BUDDHA BIR SUBBA</h2>
+        <h3 class="type">NON-TEACHING STAFF</h3>
+        <button class="btn">View More</button>
+    </div>
+
+    <div class="card">
+        <img src="SUSMA PRADHAN.webp" alt="" class="img">
+        <h2 class="name">SUSMA PRADHAN</h2>
+        <h3 class="type">NON-TEACHING STAFF</h3>
+        <button class="btn">View More</button>
+    </div>
+
+    <div class="card">
+        <img src="MAN BAHADUR BARAILY.webp" alt="" class="img">
+        <h2 class="name">MAN BAHADUR BARAILY</h2>
+        <h3 class="type">NON-TEACHING STAFF</h3>
+        <button class="btn">View More</button>
+    </div>
+
+    <div class="card">
+        <img src="MEENU LOHAR.webp" alt="" class="img">
+        <h2 class="name">MEENU LOHAR</h2>
+        <h3 class="type">NON-TEACHING STAFF</h3>
+        <button class="btn">View More</button>
+    </div>
+
+    <div class="card">
+        <img src="CHANDRA KALA SHARMA.webp" alt="" class="img">
+        <h2 class="name">CHANDRA KALA SHARMA</h2>
+        <h3 class="type">NON-TEACHING STAFF</h3>
+        <button class="btn">View More</button>
+    </div>
+
+    <div class="card">
+        <img src="CHANDRA MADAN GURUNG.webp" alt="" class="img">
+        <h2 class="name">CHANDRA MADAN GURUNG</h2>
+        <h3 class="type">NON-TEACHING STAFF</h3>
+        <button class="btn">View More</button>
+    </div>
+
+    <div class="card">
+        <img src="SUNAINA CHETTRI.webp" alt="" class="img">
+        <h2 class="name">SUNAINA CHETTRI</h2>
+        <h3 class="type">NON-TEACHING STAFF</h3>
+        <button class="btn">View More</button>
+    </div>
+
+    <div class="card">
+        <img src="MEENA CHETTRI.webp" alt="" class="img">
+        <h2 class="name">MEENA CHETTRI</h2>
+        <h3 class="type">NON-TEACHING STAFF</h3>
+        <button class="btn">View More</button>
+    </div>
+
+    <div class="card">
+        <img src="ANURADHA SHARNMA.webp" alt="" class="img">
+        <h2 class="name">ANURADHA SHARNMA</h2>
+        <h3 class="type">NON-TEACHING STAFF</h3>
+        <button class="btn">View More</button>
+    </div>
+
+    <div class="card">
+        <img src="PANTU GURUNG.webp" alt="" class="img">
+        <h2 class="name">PANTU GURUNG</h2>
+        <h3 class="type">NON-TEACHING STAFF</h3>
+        <button class="btn">View More</button>
+    </div>
+
+    <div class="card">
+        <img src="DAMBER KUMARI CHETTRI.webp" alt="" class="img">
+        <h2 class="name">DAMBER KUMARI CHETTRI</h2>
+        <h3 class="type">NON-TEACHING STAFF</h3>
+        <button class="btn">View More</button>
+    </div>
+
+    <div class="card">
+        <img src="BINU GURUNG.webp" alt="" class="img">
+        <h2 class="name">BINU GURUNG</h2>
+        <h3 class="type">NON-TEACHING STAFF</h3>
+        <button class="btn">View More</button>
+    </div>
+
+    <div class="card">
+        <img src="RAM CHANDRA GIRI.webp" alt="" class="img">
+        <h2 class="name">RAM CHANDRA GIRI</h2>
+        <h3 class="type">NON-TEACHING STAFF</h3>
+        <button class="btn">View More</button>
+    </div>
+
+    <div class="card">
+        <img src="PRANISHA SHARMA.webp" alt="" class="img">
+        <h2 class="name">PRANISHA SHARMA</h2>
+        <h3 class="type">NON-TEACHING STAFF</h3>
+        <button class="btn">View More</button>
+    </div>
+
+    <div class="card">
+        <img src="ANNIE THAPA.webp" alt="" class="img">
+        <h2 class="name">ANNIE THAPA</h2>
+        <h3 class="type">NON-TEACHING STAFF</h3>
+        <button class="btn">View More</button>
+    </div>
+
+    <div class="card">
+        <img src="SITA SHARMA.webp" alt="" class="img">
+        <h2 class="name">SITA SHARMA</h2>
+        <h3 class="type">NON-TEACHING STAFF</h3>
+        <button class="btn">View More</button>
+    </div>
+
+    <div class="card">
+        <img src="RANJANA TAMANG.webp" alt="" class="img">
+        <h2 class="name">RANJANA TAMANG</h2>
+        <h3 class="type">NON-TEACHING STAFF</h3>
+        <button class="btn">View More</button>
+    </div>
+
+    <div class="card">
+        <img src="NIHAL PRADHAN.webp" alt="" class="img">
+        <h2 class="name">NIHAL PRADHAN</h2>
+        <h3 class="type">NON-TEACHING STAFF</h3>
+        <button class="btn">View More</button>
+    </div>
+
+    <div class="card">
+        <img src="KUMAR BHANDARI.webp" alt="" class="img">
+        <h2 class="name">KUMAR BHANDARI</h2>
+        <h3 class="type">NON-TEACHING STAFF</h3>
+        <button class="btn">View More</button>
+    </div>
+</main>
+<br>
 
 <footer>
     <p>RBGGSST</p>
@@ -211,12 +519,13 @@
             </a>
         </div>
     </div>
+    <br>
 
     <p>
-        PAGE DESIGNED BY 
+        PAGE DESIGNED BY
         <a href="https://wa.me/9239087045" target="_blank">
             <b><i>ABHINAY PRADHAN</i></b>
-        </a> 
+        </a>
         FOR INFORMATIONAL PURPOSE ONLY
     </p>
 </footer>
