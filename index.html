@@ -1,286 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ratna Bdr. Gurung Govt. Secondary School</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ratna Bdr. Gurung Govt. Secondary School</title>
 
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" 
-          integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" 
-          crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" 
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Open Sans', sans-serif;
-        }
-
-        body {
-            background-color: #002B36;
-            color: #FAFAFA;
-            font-size: 16px;
-            padding: 15px;
-            text-align: center;
-            line-height: 1.6;
-        }
-
-        .line {
-            width: auto;
-            height: 2px;
-            background-color: #f9a825;
-            margin: 20px auto;
-        }
-
-        li {
-            list-style: none;
-        }
-
-        a {
-            color: #FAFAFA;
-            text-decoration: none;
-            font-size: 1rem;
-        }
-
-        a:hover {
-            color: #f9a825;
-        }
-
-        header {
-            position: relative;
-            padding: 0 2rem;
-        }
-
-        .navbar {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .navbar .logo a {
-            font-size: 1.2rem;
-            font-weight: bold;
-        }
-
-        /* Links for large screens */
-        .navbar .links {
-            display: flex;
-            gap: 2rem;
-        }
-
-        /* Hide the checkbox */
-        #menu-toggle {
-            display: none;
-        }
-
-        /* Creative Hamburger Button */
-        .menu-icon {
-            display: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: white;
-            background: linear-gradient(45deg, #f9a825, #ff6f00);
-            padding: 10px 14px;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            box-shadow: 0px 4px 8px rgba(0,0,0,0.3);
-        }
-
-        .menu-icon:hover {
-            background: linear-gradient(45deg, #ff6f00, #f9a825);
-            transform: scale(1.1);
-        }
-
-        /* Active effect when menu is open */
-        #menu-toggle:checked + .menu-icon {
-            background: linear-gradient(45deg, #4caf50, #2e7d32);
-            color: white;
-            transform: rotate(90deg);
-        }
-
-        /* ===== MOBILE MENU ===== */
-        @media (max-width: 768px) {
-            .navbar .links {
-                display: none;
-                flex-direction: column;
-                background-color: #002B36;
-                position: absolute;
-                top: 60px;
-                right: 2rem;
-                width: 200px;
-                padding: 1rem;
-                border-radius: 10px;
-                gap: 1rem;
-                z-index: 100;
-                box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-                animation: fadeIn 0.3s ease;
-            }
-
-            /* Show menu when checkbox is checked */
-            #menu-toggle:checked + .menu-icon + .links {
-                display: flex;
-            }
-
-            .menu-icon {
-                display: block;
-            }
-        }
-
-        /* Smooth Fade-in Animation */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Icon styling */
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 30px;
-            margin-top: 10px;
-        }
-
-        .facebook i {
-            font-size: 2rem;
-            color: #1877F2;
-            transition: color 0.3s ease;
-        }
-
-        .facebook i:hover {
-            color: #f9a825;
-        }
-
-        .call i {
-            font-size: 2rem;
-            color: #4CAF50;
-            transition: color 0.3s ease;
-        }
-
-        .call i:hover {
-            color: #f9a825;
-        }
-
-.container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.card {
-    width: 300px;
-    height: 300px;
-    background: #07182E;
-    position: relative;
-    display: flex;
-    place-content: center;
-    place-items: center;
-    overflow: hidden;
-    border-radius: 10px;
-    padding: 30px;
-}
-
-.card h5 {
-    z-index: 1;
-    color: white;
-    font-size: 1em;
-}
-
-.card::before {
-    content: "";
-    position: absolute;
-    width: 200px;
-    height: 400px;
-    background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
-    animation: rotBGimg 5s linear infinite;
-    transition: all 0.2s linear;
-}
-
-@keyframes rotBGimg {
-    from {
-        transform: rotate(0deg);
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Open Sans', sans-serif;
     }
-    to {
-        transform: rotate(360deg);
+
+    body {
+      background-color: #002B36;
+      color: #FAFAFA;
+      font-size: 16px;
+      padding: 15px;
+      text-align: center;
+      line-height: 1.6;
+      animation: fadeInBody 1s ease;
     }
-}
 
-.card::after {
-    content: "";
-    position: absolute;
-    background: #07182E;
-    inset: 5px;
-    border-radius: 15px;
-}
+    a {
+        text-decoration: none;
+    }
 
+    @keyframes fadeInBody { from {opacity: 0;} to {opacity: 1;} }
 
-    </style>
+    /* ===== NAVBAR ===== */
+    header {
+      position: relative;
+      padding: 0 2rem;
+      animation: slideDown 1s ease;
+    }
+    @keyframes slideDown { from {transform: translateY(-80px); opacity: 0;} to {transform: translateY(0); opacity: 1;} }
+
+    .navbar {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .navbar .logo a {
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #FAFAFA;
+      transition: all 0.3s ease;
+    }
+    .navbar .logo a:hover { color: #FFB300; letter-spacing: 2px; }
+
+    .navbar .links {
+      display: flex;
+      gap: 2rem;
+      animation: fadeIn 1.5s ease;
+    }
+
+    li { list-style: none; }
+    .links a { color: #FAFAFA; font-weight: 500; transition: all 0.3s ease; }
+    .links a:hover { color: #FFB300; transform: translateY(-3px); }
+
+    /* Hamburger */
+    #menu-toggle { display: none; }
+    .menu-icon {
+      display: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: white;
+      background: linear-gradient(45deg, #00BCD4, #f9a825);
+      padding: 10px 14px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.3);
+    }
+    .menu-icon:hover {
+      background: linear-gradient(45deg, #ff6f00, #f9a825);
+      transform: scale(1.1) rotate(10deg);
+    }
+    #menu-toggle:checked + .menu-icon {
+      background: linear-gradient(45deg, #43A047, #2E7D32);
+      transform: rotate(90deg);
+    }
+
+    /* Mobile Menu */
+    @media (max-width: 768px) {
+      .navbar .links {
+        display: none;
+        flex-direction: column;
+        background-color: #013844;
+        position: absolute;
+        top: 60px;
+        right: 2rem;
+        width: 200px;
+        padding: 1rem;
+        border-radius: 10px;
+        gap: 1rem;
+        z-index: 100;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+        animation: fadeIn 0.5s ease;
+      }
+      #menu-toggle:checked + .menu-icon + .links { display: flex; }
+      .menu-icon { display: block; }
+    }
+
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(-10px);} to { opacity: 1; transform: translateY(0);} }
+
+    /* ===== MISSION CARD ===== */
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 20px 0;
+    }
+
+    .mission-card {
+      width: 320px;
+      background: #07182E;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border-radius: 15px;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .mission-card h5 {
+      z-index: 1;
+      color: white;
+      font-size: 1em;
+    }
+
+    .mission-card::before {
+      content: "";
+      position: absolute;
+      width: 200px;
+      height: 400px;
+      background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
+      animation: rotBGimg 5s linear infinite;
+    }
+    @keyframes rotBGimg {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    .mission-card::after {
+      content: "";
+      position: absolute;
+      background: #07182E;
+      inset: 5px;
+      border-radius: 15px;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      margin-top: 50px;
+      padding: 20px;
+      background: #004D40;
+      border-radius: 12px;
+      color: #E0F7FA;
+      animation: fadeIn 2s ease;
+    }
+    footer p a { color: #FFB300; transition: all 0.3s ease; }
+    footer p a:hover { color: #00BCD4; text-shadow: 0 0 8px #00BCD4; }
+
+    .social-icons { 
+      display: flex; 
+      justify-content: center; 
+      align-items: center; 
+      gap: 30px; 
+      margin: 15px 0; 
+      animation: fadeUp 1.5s ease; 
+    }
+    @keyframes fadeUp { from { transform: translateY(40px); opacity: 0;} to { transform: translateY(0); opacity: 1;} }
+
+    .facebook i, .call i { font-size: 2rem; transition: 0.4s ease; transform: scale(1); }
+    .facebook i { color: #1877F2; }
+    .call i { color: #4CAF50; }
+    .facebook i:hover, .call i:hover { color: #FFB300; transform: scale(1.3) rotate(10deg); }
+  </style>
 </head>
 <body>
 
-    <header>
+  <header>
     <nav class="navbar">
-        <div class="logo"><a href="https://www.facebook.com/share/1EjWCDv4Ub/">RBG GOVERNMENT SECONDARY SCHOOL TARPIN</a></div>
+      <div class="logo"><a href="https://www.facebook.com/share/1EjWCDv4Ub/">RBG GOVERNMENT SECONDARY SCHOOL TARPIN</a></div>
 
-        <!-- Hidden checkbox for toggle -->
-        <input type="checkbox" id="menu-toggle">
-        <label for="menu-toggle" class="menu-icon">
-            <i class="fa-solid fa-bars"></i>
-        </label>
+      <!-- Hidden checkbox for toggle -->
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="menu-icon">
+        <i class="fa-solid fa-bars"></i>
+      </label>
 
-        <ul class="links">
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="ABOUT US.html">ABOUT US</a></li>
-            <li><a href="TEACHERS' FACULTY.html">TEACHERS' FACULTY</a></li>
-            <li><a href="GALLERY.html">GALLERY</a></li>
-        </ul>
+      <ul class="links">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="ABOUT US.html">ABOUT US</a></li>
+        <li><a href="TEACHERS' FACULTY.html">TEACHERS' FACULTY</a></li>
+        <li><a href="GALLERY.html">GALLERY</a></li>
+      </ul>
     </nav>
-</header>
-<br>
-   <div class="container">
-        <div class="card">
-            <h5>TO INSPIRE LIFELONG LEARNINGS, COMPASSIONATE GLOBAL CITIZENS, AND RESILIENT
-            LEARNERS THROUGH INNOVATIVE EDUCATION FORSTERING
-            CREATIVITY CRITICAL THINKING AND COLLABORATION FOR BRIGHTER FUTURE.</h5>
-        </div>
+  </header>
+
+  <div class="container">
+    <div class="mission-card">
+      <h5>
+        TO INSPIRE LIFELONG LEARNING, COMPASSIONATE GLOBAL CITIZENS, 
+        AND RESILIENT LEARNERS THROUGH INNOVATIVE EDUCATION 
+        FOSTERING CREATIVITY, CRITICAL THINKING AND COLLABORATION 
+        FOR A BRIGHTER FUTURE.
+      </h5>
     </div>
-<br>
-    <a href="GALLERY.html"><img src="1.webp" width="400" style="height: auto;"></a>
+  </div>
 
-    <footer>
-<br>
+  <a href="GALLERY.html">
+    <img src="1.webp" width="400" style="height: auto; border-radius: 12px; margin-top:20px;">
+  </a>
+
+  <footer>
     <p>RBGGSST</p>
-
     <div class="social-icons">
-        <div class="facebook">
-            <a href="https://www.facebook.com/share/1EjWCDv4Ub/" target="_blank">
-                <i class="fa-brands fa-facebook"></i>
-            </a>
-        </div>
-        <div class="call">
-            <a href="tel:9239087045">
-                <i class="fa-solid fa-phone"></i>
-            </a>
-        </div>
+      <div class="facebook">
+        <a href="https://www.facebook.com/share/1EjWCDv4Ub/" target="_blank">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+      </div>
+      <div class="call">
+        <a href="tel:9239087045">
+          <i class="fa-solid fa-phone"></i>
+        </a>
+      </div>
     </div>
     <p>
-        PAGE DESIGNED BY 
-        <a href="https://wa.me/9239087045" target="_blank">
-            <b><i>ABHINAY PRADHAN</i></b>
-        </a> 
-        FOR INFORMATIONAL PURPOSE ONLY
+      PAGE DESIGNED BY 
+      <a href="https://wa.me/9239087045" target="_blank">
+        <b><i>ABHINAY PRADHAN</i></b>
+      </a> 
+      FOR INFORMATIONAL PURPOSE ONLY
     </p>
-    </footer>
+  </footer>
 </body>
 </html>
