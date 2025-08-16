@@ -1,239 +1,307 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ratna Bdr. Gurung Govt. Secondary School</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ratna Bdr. Gurung Govt. Secondary School</title>
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" crossorigin="anonymous">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" crossorigin="anonymous">
 
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Open Sans', sans-serif; }
-        body { background-color: #002B36; color: #FAFAFA; font-size: 16px; padding: 15px; text-align: center; line-height: 1.6; }
-        li { list-style: none; }
-        a { color: #FAFAFA; text-decoration: none; font-size: 1rem; }
-        a:hover { color: #f9a825; }
-        header { position: relative; padding: 0 2rem; }
-        .navbar { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
-        .navbar .rbg a { font-size: 1.2rem; font-weight: bold; }
-        .navbar .links { display: flex; gap: 2rem; }
-        #menu-toggle { display: none; }
-        .menu-icon { display: none; font-size: 1.5rem; cursor: pointer; color: white; background: linear-gradient(45deg, #f9a825, #ff6f00); padding: 10px 14px; border-radius: 8px; transition: all 0.3s ease; box-shadow: 0px 4px 8px rgba(0,0,0,0.3); }
-        .menu-icon:hover { background: linear-gradient(45deg, #ff6f00, #f9a825); transform: scale(1.1); }
-        #menu-toggle:checked + .menu-icon { background: linear-gradient(45deg, #4caf50, #2e7d32); color: white; transform: rotate(90deg); }
-        @media (max-width: 768px) {
-            .navbar .links { display: none; flex-direction: column; background-color: #002B36; position: absolute; top: 60px; right: 2rem; width: 200px; padding: 1rem; border-radius: 10px; gap: 1rem; z-index: 100; box-shadow: 0 5px 15px rgba(0,0,0,0.5); animation: fadeIn 0.3s ease; }
-            #menu-toggle:checked + .menu-icon + .links { display: flex; }
-            .menu-icon { display: block; }
-        }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
-        .social-icons { display: flex; justify-content: center; align-items: center; gap: 30px; margin-top: 10px; }
-        .facebook i { font-size: 2rem; color: #1877F2; transition: color 0.3s ease; }
-        .facebook i:hover { color: #f9a825; }
-        .call i { font-size: 2rem; color: #4CAF50; transition: color 0.3s ease; }
-        .call i:hover { color: #f9a825; }
-        .container { display: flex; justify-content: center; margin: 40px 20px 0px 20px; }
-        .box { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
-        .dream { display: flex; flex-direction: column; gap: 10px; max-width: 450px; width: 100%; }
-        img { max-width: 100%; height: auto; border-radius: 12px; display: block; cursor: pointer; }
-        @media only screen and (max-width: 500px) {
-            .box { flex-direction: column; align-items: center; }
-            .dream { max-width: 100%; }
-        }
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Open Sans', sans-serif; }
+    body { background-color: #002B36; color: #FAFAFA; font-size: 16px; padding: 15px; text-align: center; line-height: 1.6; animation: fadeInBody 1s ease; }
+    
+    @keyframes fadeInBody { from {opacity: 0;} to {opacity: 1;} }
 
-        /* Lightbox Styles */
-        .lightbox {
-            display: none;
-            position: fixed;
-            z-index: 200;
-            left: 0; top: 0;
-            width: 100%; height: 100%;
-            background: rgba(0,0,0,0.9);
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
-        .lightbox img {
-            max-width: 90%;
-            max-height: 80%;
-            border-radius: 8px;
-        }
+    a { color: #00BCD4; text-decoration: none; font-size: 1rem; transition: all 0.3s ease; }
+    a:hover { color: #FFB300; transform: scale(1.1); }
 
-        /* Animated Buttons */
-        .lightbox .close, .lightbox .prev, .lightbox .next {
-            position: absolute;
-            background: linear-gradient(45deg, #ff416c, #ff4b2b);
-            padding: 15px;
-            border-radius: 50%;
-            color: white;
-            font-size: 1.8rem;
-            cursor: pointer;
-            user-select: none;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-            animation: pulse 2s infinite;
-        }
+    header { position: relative; padding: 0 2rem; animation: slideDown 1s ease; }
+    @keyframes slideDown { from {transform: translateY(-80px); opacity: 0;} to {transform: translateY(0); opacity: 1;} }
 
-        .lightbox .close { top: 20px; right: 30px; }
-        .lightbox .prev { left: 30px; top: 50%; transform: translateY(-50%); }
-        .lightbox .next { right: 30px; top: 50%; transform: translateY(-50%); }
+    /* Navbar */
+    .navbar {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .navbar .logo a {
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #FAFAFA;
+      transition: all 0.3s ease;
+    }
+    .navbar .logo a:hover { color: #FFB300; letter-spacing: 2px; }
 
-        .lightbox .prev:hover, .lightbox .next:hover, .lightbox .close:hover {
-            background: linear-gradient(45deg, #1e90ff, #00bfff);
-            transform: scale(1.2);
-            box-shadow: 0 6px 18px rgba(0,0,0,0.6);
-        }
+    .navbar .links {
+      display: flex;
+      gap: 2rem;
+      animation: fadeIn 1.5s ease;
+    }
 
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
-        }
+    li { list-style: none; }
+    .links a { color: #FAFAFA; font-weight: 500; transition: all 0.3s ease; }
+    .links a:hover { color: #FFB300; transform: translateY(-3px); }
 
-        /* Scroll to top button */
-        html { scroll-behavior: smooth; }
-        .scroll-to-top {
-          position: fixed;
-          bottom: 20px;
-          right: 20px;
-          background: linear-gradient(45deg, #ff416c, #ff4b2b);
-          color: #fff;
-          padding: 15px 20px;
-          border-radius: 50%;
-          font-size: 20px;
-          text-decoration: none;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-          transition: all 0.3s ease;
-          animation: bounce 2s infinite;
-        }
-        .scroll-to-top:hover {
-          background: linear-gradient(45deg, #1e90ff, #00bfff);
-          transform: scale(1.1);
-          box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
-        }
-        @keyframes bounce {
-          0%, 100% { transform: translateY(0); }
-          50% { transform: translateY(-5px); }
-        }
-    </style>
+    /* Hamburger */
+    #menu-toggle { display: none; }
+    .menu-icon {
+      display: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: white;
+      background: linear-gradient(45deg, #00BCD4, #f9a825);
+      padding: 10px 14px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.3);
+    }
+    .menu-icon:hover {
+      background: linear-gradient(45deg, #ff6f00, #f9a825);
+      transform: scale(1.1) rotate(10deg);
+    }
+    #menu-toggle:checked + .menu-icon {
+      background: linear-gradient(45deg, #43A047, #2E7D32);
+      transform: rotate(90deg);
+    }
+
+    /* Mobile Menu */
+    @media (max-width: 768px) {
+      .navbar .links {
+        display: none;
+        flex-direction: column;
+        background-color: #013844;
+        position: absolute;
+        top: 60px;
+        right: 2rem;
+        width: 200px;
+        padding: 1rem;
+        border-radius: 10px;
+        gap: 1rem;
+        z-index: 100;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+        animation: fadeIn 0.5s ease;
+      }
+      #menu-toggle:checked + .menu-icon + .links { display: flex; }
+      .menu-icon { display: block; }
+    }
+
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(-10px);} to { opacity: 1; transform: translateY(0);} }
+
+    /* Gallery */
+    .container { display: flex; justify-content: center; margin: 40px 20px 0px 20px; }
+    .box { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
+    .dream { display: flex; flex-direction: column; gap: 10px; max-width: 450px; width: 100%; }
+    img { max-width: 100%; height: auto; border-radius: 12px; display: block; cursor: pointer; }
+    @media only screen and (max-width: 500px) {
+      .box { flex-direction: column; align-items: center; }
+      .dream { max-width: 100%; }
+    }
+
+    /* Lightbox */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 200;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.9);
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    .lightbox img { max-width: 90%; max-height: 80%; border-radius: 8px; }
+    .lightbox .close, .lightbox .prev, .lightbox .next {
+      position: absolute;
+      background: linear-gradient(45deg, #ff416c, #ff4b2b);
+      padding: 15px;
+      border-radius: 50%;
+      color: white;
+      font-size: 1.8rem;
+      cursor: pointer;
+      user-select: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      animation: pulse 2s infinite;
+    }
+    .lightbox .close { top: 20px; right: 30px; }
+    .lightbox .prev { left: 30px; top: 50%; transform: translateY(-50%); }
+    .lightbox .next { right: 30px; top: 50%; transform: translateY(-50%); }
+    .lightbox .prev:hover, .lightbox .next:hover, .lightbox .close:hover {
+      background: linear-gradient(45deg, #1e90ff, #00bfff);
+      transform: scale(1.2);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+    }
+    @keyframes pulse { 0% { transform: scale(1);} 50% { transform: scale(1.1);} 100% { transform: scale(1);} }
+
+    /* Scroll to top */
+    html { scroll-behavior: smooth; }
+    .scroll-to-top {
+      position: fixed;
+      bottom: 20px; right: 20px;
+      background: linear-gradient(45deg, #ff416c, #ff4b2b);
+      color: #fff;
+      padding: 15px 20px;
+      border-radius: 50%;
+      font-size: 20px;
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: all 0.3s ease;
+      animation: bounce 2s infinite;
+    }
+    .scroll-to-top:hover {
+      background: linear-gradient(45deg, #1e90ff, #00bfff);
+      transform: scale(1.1);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+    }
+    @keyframes bounce { 0%, 100% { transform: translateY(0);} 50% { transform: translateY(-5px);} }
+    
+    /* ===== FOOTER ===== */
+    footer {
+      margin-top: 50px;
+      padding: 20px;
+      background: #004D40;
+      border-radius: 12px;
+      color: #E0F7FA;
+      animation: fadeIn 2s ease;
+    }
+    footer p a { color: #ffffff; transition: all 0.3s ease; }
+    footer p a:hover { color: #00BCD4; text-shadow: 0 0 8px #00BCD4; }
+
+    .social-icons { 
+      display: flex; 
+      justify-content: center; 
+      align-items: center; 
+      gap: 30px; 
+      margin: 15px 0; 
+    }
+
+    .facebook i, .call i { font-size: 2rem; transition: 0.4s ease; transform: scale(1); }
+    .facebook i { color: #1877F2; }
+    .call i { color: #4CAF50; }
+    .facebook i:hover, .call i:hover { color: #FFB300; transform: scale(1.3) rotate(10deg); }
+  </style>
 </head>
 <body>
 
 <header>
-    <nav class="navbar">
-        <div class="rbg"><a href="https://www.facebook.com/share/1EjWCDv4Ub/">RBG GOVERNMENT SECONDARY SCHOOL TARPIN</a></div>
-        <input type="checkbox" id="menu-toggle">
-        <label for="menu-toggle" class="menu-icon"><i class="fa-solid fa-bars"></i></label>
-        <ul class="links">
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="ABOUT US.html">ABOUT US</a></li>
-            <li><a href="TEACHERS' FACULTY.html">TEACHERS' FACULTY</a></li>
-            <li><a href="GALLERY.html">GALLERY</a></li>
-        </ul>
-    </nav>
+  <nav class="navbar">
+    <div class="logo"><a href="https://www.facebook.com/share/1EjWCDv4Ub/">RBG GOVERNMENT SECONDARY SCHOOL TARPIN</a></div>
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon"><i class="fa-solid fa-bars"></i></label>
+    <ul class="links">
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="ABOUT US.html">ABOUT US</a></li>
+      <li><a href="TEACHERS' FACULTY.html">TEACHERS' FACULTY</a></li>
+      <li><a href="GALLERY.html">GALLERY</a></li>
+    </ul>
+  </nav>
 </header>
 
 <main>
-    <div class="container">
-        <div class="box">
-            <div class="dream">
-                <img src="1.webp" alt="School building front view">
-                <img src="2.webp" alt="Students gathered in assembly area">
-                <img src="3.webp" alt="Classroom interior with students">
-                <img src="4.webp" alt="Science laboratory session">
-                <img src="5.webp" alt="Sports day activities">
-                <img src="6.webp" alt="Teachers group photo">
-                <img src="7.webp" alt="Annual cultural program stage">
-                <img src="8.webp" alt="School garden and greenery">
-                <img src="9.webp" alt="Computer lab with students">
-                <img src="10.webp" alt="School entrance gate">
-            </div>
-            <div class="dream">
-                <img src="11.webp" alt="Students playing football">
-                <img src="12.webp" alt="Library interior">
-                <img src="13.webp" alt="Science fair project display">
-                <img src="14.webp" alt="School tour for visitors">
-                <img src="15.webp" alt="Independence Day celebration">
-                <img src="16.webp" alt="Group photo with principal">
-                <img src="17.webp" alt="Art and craft exhibition">
-                <img src="18.webp" alt="Classroom teaching session">
-                <img src="19.webp" alt="School corridor view">
-                <img src="20.webp" alt="Farewell program">
-            </div>
-        </div>
+  <div class="container">
+    <div class="box">
+      <div class="dream">
+        <img src="1.webp" alt="School building front view">
+        <img src="2.webp" alt="Students gathered in assembly area">
+        <img src="3.webp" alt="Classroom interior with students">
+        <img src="4.webp" alt="Science laboratory session">
+        <img src="5.webp" alt="Sports day activities">
+        <img src="6.webp" alt="Teachers group photo">
+        <img src="7.webp" alt="Annual cultural program stage">
+        <img src="8.webp" alt="School garden and greenery">
+        <img src="9.webp" alt="Computer lab with students">
+        <img src="10.webp" alt="School entrance gate">
+      </div>
+      <div class="dream">
+        <img src="11.webp" alt="Students playing football">
+        <img src="12.webp" alt="Library interior">
+        <img src="13.webp" alt="Science fair project display">
+        <img src="14.webp" alt="School tour for visitors">
+        <img src="15.webp" alt="Independence Day celebration">
+        <img src="16.webp" alt="Group photo with principal">
+        <img src="17.webp" alt="Art and craft exhibition">
+        <img src="18.webp" alt="Classroom teaching session">
+        <img src="19.webp" alt="School corridor view">
+        <img src="20.webp" alt="Farewell program">
+      </div>
     </div>
+  </div>
 </main>
 
 <!-- Lightbox -->
 <div class="lightbox" id="lightbox">
-    <span class="close" id="closeBtn">&times;</span>
-    <span class="prev" id="prevBtn">&#10094;</span>
-    <img id="lightboxImg" src="">
-    <span class="next" id="nextBtn">&#10095;</span>
+  <span class="close" id="closeBtn">&times;</span>
+  <span class="prev" id="prevBtn">&#10094;</span>
+  <img id="lightboxImg" src="">
+  <span class="next" id="nextBtn">&#10095;</span>
 </div>
 
 <!-- Scroll to top button -->
 <a href="#top" class="scroll-to-top">↑</a>
 
 <footer>
-    <br>RBGGSST<br>
-    <div class="social-icons">
-        <div class="facebook"><a href="https://www.facebook.com/share/1EjWCDv4Ub/" target="_blank"><i class="fa-brands fa-facebook"></i></a></div>
-        <div class="call"><a href="tel:9239087045"><i class="fa-solid fa-phone"></i></a></div>
-    </div>
-    <br>PAGE DESIGNED BY <a href="https://wa.me/9239087045" target="_blank"><b><i>ABHINAY PRADHAN</i></b></a> FOR INFORMATIONAL PURPOSE ONLY
+  <br>RBGGSST<br>
+  <div class="social-icons">
+    <div class="facebook"><a href="https://www.facebook.com/share/1EjWCDv4Ub/" target="_blank"><i class="fa-brands fa-facebook"></i></a></div>
+    <div class="call"><a href="tel:9239087045"><i class="fa-solid fa-phone"></i></a></div>
+  </div>
+  <br>PAGE DESIGNED BY <a href="https://wa.me/9239087045" target="_blank"><b><i>ABHINAY PRADHAN</i></b></a> FOR INFORMATIONAL PURPOSE ONLY
 </footer>
 
 <script>
-    const images = document.querySelectorAll('.dream img');
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightboxImg');
-    const closeBtn = document.getElementById('closeBtn');
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
-    let currentIndex = 0;
+  const images = document.querySelectorAll('.dream img');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const closeBtn = document.getElementById('closeBtn');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  let currentIndex = 0;
 
-    function showImage(index) {
-        lightboxImg.src = images[index].src;
-        lightbox.style.display = 'flex';
-        currentIndex = index;
+  function showImage(index) {
+    lightboxImg.src = images[index].src;
+    lightbox.style.display = 'flex';
+    currentIndex = index;
+  }
+
+  images.forEach((img, index) => {
+    img.addEventListener('click', () => showImage(index));
+  });
+
+  closeBtn.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+  });
+
+  prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    showImage(currentIndex);
+  });
+
+  nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % images.length;
+    showImage(currentIndex);
+  });
+
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+      lightbox.style.display = 'none';
     }
+  });
 
-    images.forEach((img, index) => {
-        img.addEventListener('click', () => showImage(index));
-    });
-
-    closeBtn.addEventListener('click', () => {
-        lightbox.style.display = 'none';
-    });
-
-    prevBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex - 1 + images.length) % images.length;
-        showImage(currentIndex);
-    });
-
-    nextBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex + 1) % images.length;
-        showImage(currentIndex);
-    });
-
-    lightbox.addEventListener('click', (e) => {
-        if (e.target === lightbox) {
-            lightbox.style.display = 'none';
-        }
-    });
-
-    document.addEventListener('keydown', (e) => {
-        if (lightbox.style.display === 'flex') {
-            if (e.key === 'ArrowLeft') prevBtn.click();
-            if (e.key === 'ArrowRight') nextBtn.click();
-            if (e.key === 'Escape') closeBtn.click();
-        }
-    });
+  document.addEventListener('keydown', (e) => {
+    if (lightbox.style.display === 'flex') {
+      if (e.key === 'ArrowLeft') prevBtn.click();
+      if (e.key === 'ArrowRight') nextBtn.click();
+      if (e.key === 'Escape') closeBtn.click();
+    }
+  });
 </script>
 
 </body>
