@@ -152,7 +152,7 @@
             color: #f9a825;
         }
 
-        .card {
+        .card1 {
             background-color: #006D77; /* Updated background color */
             border-radius: 6px;
             display: inline-block;
@@ -168,7 +168,7 @@
             height: 175px;
         }
 
-        .name {
+        .name1 {
             color: #FAFAFA;
             font-size: 21px;
         }
@@ -203,6 +203,150 @@
             padding-top: 50px;
             color: #04efdb;
         }
+
+
+        .sub-manin {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #002B36;
+    }
+
+        .slide-container {
+      max-width: 1120px;
+      width: 100%;
+      position: relative;
+      background-color: #002B36;
+      padding: 40px 0;
+      overflow: hidden;
+    }
+
+    .slide-content {
+      margin: 0 40px;
+      overflow: hidden;
+    }
+
+    .card-wrapper {
+      display: flex;
+      gap: 20px;
+      transition: transform 0.4s ease;
+    }
+
+    .card {
+      min-width: 320px;
+      border-radius: 25px;
+      background-color: #ffffff;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      flex-shrink: 0;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .image-content {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 25px 0;
+    }
+
+    .overlay {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      background-color: #4070f4;
+      border-radius: 25px 25px 0 25px;
+      z-index: 0;
+    }
+
+    .overlay::before,
+    .overlay::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: -40px;
+      height: 40px;
+      width: 10px;
+      background-color: #131e3e;
+    }
+
+    .overlay::after {
+      border-radius: 0 25px 0 0;
+      background-color: #fff;
+    }
+
+    .card-image {
+      position: relative;
+      height: 150px;
+      width: 150px;
+      border-radius: 50%;
+      background-color: #fff;
+      padding: 3px;
+      z-index: 1;
+    }
+
+    .card-image .card-img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #4070f4;
+    }
+
+    .card-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px 14px 20px;
+      text-align: center;
+    }
+
+    .name {
+      font-size: 20px;
+      font-weight: 500;
+      color: #333;
+    }
+
+    .QUALIFICATION,
+    .PROFESSIONAL,
+    .DATE {
+      font-size: 15px;
+      color: #3b2e2e;
+      margin-top: 5px;
+    }
+
+    /* Buttons */
+    .slide-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      border: none;
+      color: white;
+      font-size: 20px;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 10;
+      border-radius: 50%;
+    }
+
+    .prev-btn {
+      left: 10px;
+    }
+
+    .next-btn {
+      right: 10px;
+    }
+
+    .slide-btn:hover {
+      background-color: #f9a825;
+    }
     </style>
 </head>
 <body>
@@ -228,296 +372,975 @@
 </header>
 
 <main>
-    <div class="card">
+    <div class="card1">
         <img src="DURGA D DAHAL.webp" alt="" class="img">
-        <h2 class="name">DURGA D DAHAL</h2>
+        <h2 class="name1">DURGA D DAHAL</h2>
         <h3 class="type">Head Of The INSTITUTION </h3>
-        <button class="btn">View More</button>
+        <button class="btn"><a href="#DURGA D DAHAL">View More</a></button>
     </div>
 
     <div class="marquee">
     <marquee><b>TEACHING STAFF</b></marquee>
     </div>
 
-     <div class="card">
+     <div class="card1">
         <img src="ATINA SUBBA.webp" alt="" class="img">
-        <h2 class="name">ATINA SUBBA</h2>
+        <h2 class="name1">ATINA SUBBA</h2>
         <h3 class="type">SCHOOL INCHARGE</h3>
-        <button class="btn">View More</button>
+        <button class="btn"><a href="#ATINA SUBBA">View More</a></button>
     </div>
 
-     <div class="card">
+     <div class="card1">
         <img src="YADHU PRASHAD MISHRA.webp" alt="" class="img">
-        <h2 class="name">YADHU PRASHAD MISHRA</h2>
+        <h2 class="name1">YADHU PRASHAD MISHRA</h2>
         <h3 class="type">TEACHING STAFF</h3>
-        <button class="btn">View More</button>
+        <button class="btn"><a href="#YADHU PRASHAD MISHRA">View More</a></button>
     </div>
 
-    <div class="card">
+    <div class="card1">
         <img src="KALPANA PRADHAN.webp" alt="" class="img">
-        <h2 class="name">KALPANA PRADHAN</h2>
+        <h2 class="name1">KALPANA PRADHAN</h2>
         <h3 class="type">TEACHING STAFF</h3>
-        <button class="btn">View More</button>
+        <button class="btn"><a href="#KALPANA PRADHAN">View More</a></button>
     </div>
 
-     <div class="card">
+     <div class="card1">
         <img src="GOPAL PRASAD SHARMA.webp" alt="" class="img">
-        <h2 class="name">GOPAL PRASAD SHARMA</h2>
+        <h2 class="name1">GOPAL PRASAD SHARMA</h2>
         <h3 class="type">TEACHING STAFF</h3>
-        <button class="btn">View More</button>
+        <button class="btn"><a href="#GOPAL PRASAD SHARMA">View More</a></button>
     </div>
 
-     <div class="card">
+     <div class="card1">
         <img src="DAMBER KUMARI SHARMA.webp" alt="" class="img">
-        <h2 class="name">DAMBER KUMARI SHARMA</h2>
+        <h2 class="name1">DAMBER KUMARI SHARMA</h2>
         <h3 class="type">TEACHING STAFF</h3>
-        <button class="btn">View More</button>
+        <button class="btn"><a href="#DAMBER KUMARI SHARMA">View More</a></button>
     </div>
 
-    <div class="card">
+    <div class="card1">
         <img src="DIL KUMARI SHARMA.webp" alt="" class="img">
-        <h2 class="name">DIL KUMARI SHARMA</h2>
+        <h2 class="name1">DIL KUMARI SHARMA</h2>
         <h3 class="type">TEACHING STAFF</h3>
-        <button class="btn">View More</button>
+        <button class="btn"><a href="#DIL KUMARI SHARMA">View More</a></button>
     </div>
 
-    <div class="card">
+    <div class="card1">
         <img src="BISHNU MAYA SHARMA.webp" alt="" class="img">
-        <h2 class="name">BISHNU MAYA SHARMA</h2>
+        <h2 class="name1">BISHNU MAYA SHARMA</h2>
         <h3 class="type">TEACHING STAFF</h3>
-        <button class="btn">View More</button>
+        <button class="btn"><a href="#BISHNU MAYA SHARMA">View More</a></button>
     </div>
 
-    <div class="card">
+    <div class="card1">
         <img src="LEELA DEVI MISHRA.webp" alt="" class="img">
-        <h2 class="name">LEELA DEVI MISHRA</h2>
+        <h2 class="name1">LEELA DEVI MISHRA</h2>
         <h3 class="type">TEACHING STAFF</h3>
-        <button class="btn">View More</button>
+        <button class="btn"><a href="#LEELA DEVI MISHRA">View More</a></button>
     </div>
 
-    <div class="card">
+    <div class="card1">
         <img src="PARSU RAM SHARMA.webp" alt="" class="img">
-        <h2 class="name">PARSU RAM SHARMA</h2>
+        <h2 class="name1">PARSU RAM SHARMA</h2>
         <h3 class="type">TEACHING STAFF</h3>
-        <button class="btn">View More</button>
+        <button class="btn"><a href="#PARSU RAM SHARMA">View More</a></button>
     </div>
 
-    <div class="card">
+    <div class="card1">
         <img src="BHANU GURUNG.webp" alt="" class="img">
-        <h2 class="name">BHANU GURUNG</h2>
+        <h2 class="name1">BHANU GURUNG</h2>
         <h3 class="type">TEACHING STAFF</h3>
-        <button class="btn">View More</button>
+        <button class="btn"><a href="#BHANU GURUNG">View More</a></button>
     </div>
 
-    <div class="card">
-        <img src="SACHIN GUGUNG.webp" alt="" class="img">
-        <h2 class="name">SACHIN GUGUNG</h2>
+    <div class="card1">
+        <img src="SACHIN GURUNG.webp" alt="" class="img">
+        <h2 class="name1">SACHIN GURUNG</h2>
         <h3 class="type">TEACHING STAFF</h3>
-        <button class="btn">View More</button>
+        <button class="btn"><a href="#SACHIN GURUNG">View More</a></button>
     </div>
 
-    <div class="card">
+    <div class="card1">
         <img src="MINGMA CHOTEN SHERPA.webp" alt="" class="img">
-        <h2 class="name">MINGMA CHOTEN SHERPA</h2>
+        <h2 class="name1">MINGMA CHOTEN SHERPA</h2>
         <h3 class="type">TEACHING STAFF</h3>
-        <button class="btn">View More</button>
+        <button class="btn"><a href="#MINGMA CHOTEN SHERPA">View More</a></button>
     </div>
 
-    <div class="card">
+    <div class="card1">
         <img src="PRANITA RIZAL.webp" alt="" class="img">
-        <h2 class="name">PRANITA RIZAL</h2>
+        <h2 class="name1">PRANITA RIZAL</h2>
         <h3 class="type">TEACHING STAFF</h3>
-        <button class="btn">View More</button>
+        <button class="btn"><a href="#PRANITA RIZAL">View More</a></button>
     </div>
 
-    <div class="card">
+    <div class="card1">
         <img src="HEMANTH SUBBA.webp" alt="" class="img">
-        <h2 class="name">HEMANTH SUBBA</h2>
+        <h2 class="name1">HEMANTH SUBBA</h2>
         <h3 class="type">TEACHING STAFF</h3>
-        <button class="btn">View More</button>
+        <button class="btn"><a href="#HEMANTH SUBBA">View More</a></button>
     </div>
 
-    <div class="card">
+    <div class="card1">
         <img src="KAVITA NIROLA.webp" alt="" class="img">
-        <h2 class="name">KAVITA NIROLA</h2>
+        <h2 class="name1">KAVITA NIROLA</h2>
         <h3 class="type">TEACHING STAFF</h3>
-        <button class="btn">View More</button>
+        <button class="btn"><a href="#KAVITA NIROLA">View More</a></button>
     </div>
 
-    <div class="card">
+    <div class="card1">
         <img src="JANUKA THAPA CHETTRI.webp" alt="" class="img">
-        <h2 class="name">JANUKA THAPA CHETTRI</h2>
+        <h2 class="name1">JANUKA THAPA CHETTRI</h2>
         <h3 class="type">TEACHING STAFF</h3>
-        <button class="btn">View More</button>
+        <button class="btn"><a href="#JANUKA THAPA CHETTRI">View More</a></button>
     </div>
 
-    <div class="card">
+    <div class="card1">
         <img src="TSHERING LHAMU SHERPA.webp" alt="" class="img">
-        <h2 class="name">TSHERING LHAMU SHERPA </h2>
+        <h2 class="name1">TSHERING LHAMU SHERPA </h2>
         <h3 class="type">TEACHING STAFF</h3>
-        <button class="btn">View More</button>
+        <button class="btn"><a href="#TSHERING LHAMU SHERPA">View More</a></button>
     </div>
 
-    <div class="card">
+    <div class="card1">
         <img src="KARISHMA CHETTRI.webp" alt="" class="img">
-        <h2 class="name">KARISHMA CHETTRI</h2>
+        <h2 class="name1">KARISHMA CHETTRI</h2>
         <h3 class="type">TEACHING STAFF</h3>
-        <button class="btn">View More</button>
+        <button class="btn"><a href="#KARISHMA CHETTRI">View More</a></button>
     </div>
 
-    <div class="card">
+    <div class="card1">
         <img src="MANYLUM TSHERING LEPCHA.webp" alt="" class="img">
-        <h2 class="name">MANYLUM TSHERING LEPCHA</h2>
+        <h2 class="name1">MANYLUM TSHERING LEPCHA</h2>
         <h3 class="type">TEACHING STAFF</h3>
-        <button class="btn">View More</button>
+        <button class="btn"><a href="#MANYLUM TSHERING LEPCHA">View More</a></button>
     </div>
 
-    <div class="card">
+    <div class="card1">
         <img src="LALIMAYA MANGAR.webp" alt="" class="img">
-        <h2 class="name">LALIMAYA MANGAR</h2>
+        <h2 class="name1">LALIMAYA MANGAR</h2>
         <h3 class="type">TEACHING STAFF</h3>
-        <button class="btn">View More</button>
+        <button class="btn"><a href="#LALIMAYA MANGAR">View More</a></button>
     </div>
 
     <div class="marquee">
     <marquee><b>NON-TEACHING STAFF</b></marquee>
     </div>
 
-    <div class="card">
+    <div class="card1">
         <img src="BUDDHA BIR SUBBA.webp" alt="" class="img">
-        <h2 class="name">BUDDHA BIR SUBBA</h2>
+        <h2 class="name1">BUDDHA BIR SUBBA</h2>
         <h3 class="type">NON-TEACHING STAFF</h3>
-        <button class="btn">View More</button>
+        <button class="btn"><a href="#BUDDHA BIR SUBBA">View More</a></button>
     </div>
 
-    <div class="card">
+    <div class="card1">
         <img src="SUSMA PRADHAN.webp" alt="" class="img">
-        <h2 class="name">SUSMA PRADHAN</h2>
+        <h2 class="name1">SUSMA PRADHAN</h2>
         <h3 class="type">NON-TEACHING STAFF</h3>
-        <button class="btn">View More</button>
+        <button class="btn"><a href="#SUSMA PRADHAN">View More</a></button>
     </div>
 
-    <div class="card">
+    <div class="card1">
         <img src="MAN BAHADUR BARAILY.webp" alt="" class="img">
-        <h2 class="name">MAN BAHADUR BARAILY</h2>
+        <h2 class="name1">MAN BAHADUR BARAILY</h2>
         <h3 class="type">NON-TEACHING STAFF</h3>
-        <button class="btn">View More</button>
+        <button class="btn"><a href="#MAN BAHADUR BARAILY">View More</a></button>
     </div>
 
-    <div class="card">
+    <div class="card1">
         <img src="MEENU LOHAR.webp" alt="" class="img">
-        <h2 class="name">MEENU LOHAR</h2>
+        <h2 class="name1">MEENU LOHAR</h2>
         <h3 class="type">NON-TEACHING STAFF</h3>
-        <button class="btn">View More</button>
+        <button class="btn"><a href="#MEENU LOHAR">View More</a></button>
     </div>
 
-    <div class="card">
+    <div class="card1">
         <img src="CHANDRA KALA SHARMA.webp" alt="" class="img">
-        <h2 class="name">CHANDRA KALA SHARMA</h2>
+        <h2 class="name1">CHANDRA KALA SHARMA</h2>
         <h3 class="type">NON-TEACHING STAFF</h3>
-        <button class="btn">View More</button>
+        <button class="btn"><a href="#CHANDRA KALA SHARMA">View More</a></button>
     </div>
 
-    <div class="card">
+    <div class="card1">
         <img src="CHANDRA MADAN GURUNG.webp" alt="" class="img">
-        <h2 class="name">CHANDRA MADAN GURUNG</h2>
+        <h2 class="name1">CHANDRA MADAN GURUNG</h2>
         <h3 class="type">NON-TEACHING STAFF</h3>
-        <button class="btn">View More</button>
+        <button class="btn"><a href="#CHANDRA MADAN GURUNG">View More</a></button>
     </div>
 
-    <div class="card">
+    <div class="card1">
         <img src="SUNAINA CHETTRI.webp" alt="" class="img">
-        <h2 class="name">SUNAINA CHETTRI</h2>
+        <h2 class="name1">SUNAINA CHETTRI</h2>
         <h3 class="type">NON-TEACHING STAFF</h3>
-        <button class="btn">View More</button>
+        <button class="btn"><a href="#SUNAINA CHETTRI">View More</a></button>
     </div>
 
-    <div class="card">
+    <div class="card1">
         <img src="MEENA CHETTRI.webp" alt="" class="img">
-        <h2 class="name">MEENA CHETTRI</h2>
+        <h2 class="name1">MEENA CHETTRI</h2>
         <h3 class="type">NON-TEACHING STAFF</h3>
-        <button class="btn">View More</button>
+        <button class="btn"><a href="#MEENA CHETTRI">View More</a></button>
     </div>
 
-    <div class="card">
+    <div class="card1">
         <img src="ANURADHA SHARNMA.webp" alt="" class="img">
-        <h2 class="name">ANURADHA SHARNMA</h2>
+        <h2 class="name1">ANURADHA SHARNMA</h2>
         <h3 class="type">NON-TEACHING STAFF</h3>
-        <button class="btn">View More</button>
+        <button class="btn"><a href="#ANURADHA SHARNMA">View More</a></button>
     </div>
 
-    <div class="card">
+    <div class="card1">
         <img src="PANTU GURUNG.webp" alt="" class="img">
-        <h2 class="name">PANTU GURUNG</h2>
+        <h2 class="name1">PANTU GURUNG</h2>
         <h3 class="type">NON-TEACHING STAFF</h3>
-        <button class="btn">View More</button>
+        <button class="btn"><a href="#PANTU GURUNG">View More</a></button>
     </div>
 
-    <div class="card">
+    <div class="card1">
+        <img src="TIKA DEVI SHARMA.webp" alt="" class="img">
+        <h2 class="name1">TIKA DEVI SHARMA</h2>
+        <h3 class="type">NON-TEACHING STAFF</h3>
+        <button class="btn"><a href="#TIKA DEVI SHARMA">View More</a></button>
+    </div>
+
+    <div class="card1">
         <img src="DAMBER KUMARI CHETTRI.webp" alt="" class="img">
-        <h2 class="name">DAMBER KUMARI CHETTRI</h2>
+        <h2 class="name1">DAMBER KUMARI CHETTRI</h2>
         <h3 class="type">NON-TEACHING STAFF</h3>
-        <button class="btn">View More</button>
+        <button class="btn"><a href="#DAMBER KUMARI CHETTRI">View More</a></button>
     </div>
 
-    <div class="card">
+    <div class="card1">
         <img src="BINU GURUNG.webp" alt="" class="img">
-        <h2 class="name">BINU GURUNG</h2>
+        <h2 class="name1">BINU GURUNG</h2>
         <h3 class="type">NON-TEACHING STAFF</h3>
-        <button class="btn">View More</button>
+        <button class="btn"><a href="#BINU GURUNG">View More</a></button>
     </div>
 
-    <div class="card">
+    <div class="card1">
         <img src="RAM CHANDRA GIRI.webp" alt="" class="img">
-        <h2 class="name">RAM CHANDRA GIRI</h2>
+        <h2 class="name1">RAM CHANDRA GIRI</h2>
         <h3 class="type">NON-TEACHING STAFF</h3>
-        <button class="btn">View More</button>
+        <button class="btn"><a href="#RAM CHANDRA GIRI">View More</a></button>
     </div>
 
-    <div class="card">
+    <div class="card1">
         <img src="PRANISHA SHARMA.webp" alt="" class="img">
-        <h2 class="name">PRANISHA SHARMA</h2>
+        <h2 class="name1">PRANISHA SHARMA</h2>
         <h3 class="type">NON-TEACHING STAFF</h3>
-        <button class="btn">View More</button>
+        <button class="btn"><a href="#PRANISHA SHARMA">View More</a></button>
     </div>
 
-    <div class="card">
+    <div class="card1">
         <img src="ANNIE THAPA.webp" alt="" class="img">
-        <h2 class="name">ANNIE THAPA</h2>
+        <h2 class="name1">ANNIE THAPA</h2>
         <h3 class="type">NON-TEACHING STAFF</h3>
-        <button class="btn">View More</button>
+        <button class="btn"><a href="#ANNIE THAPA">View More</a></button>
     </div>
 
-    <div class="card">
-        <img src="SITA SHARMA.webp" alt="" class="img">
-        <h2 class="name">SITA SHARMA</h2>
-        <h3 class="type">NON-TEACHING STAFF</h3>
-        <button class="btn">View More</button>
-    </div>
-
-    <div class="card">
+    <div class="card1">
         <img src="RANJANA TAMANG.webp" alt="" class="img">
-        <h2 class="name">RANJANA TAMANG</h2>
+        <h2 class="name1">RANJANA TAMANG</h2>
         <h3 class="type">NON-TEACHING STAFF</h3>
-        <button class="btn">View More</button>
+        <button class="btn"><a href="#RANJANA TAMANG">View More</a></button>
     </div>
 
-    <div class="card">
+    <div class="card1">
         <img src="NIHAL PRADHAN.webp" alt="" class="img">
-        <h2 class="name">NIHAL PRADHAN</h2>
+        <h2 class="name1">NIHAL PRADHAN</h2>
         <h3 class="type">NON-TEACHING STAFF</h3>
-        <button class="btn">View More</button>
+        <button class="btn"><a href="#NIHAL PRADHAN">View More</a></button>
     </div>
 
-    <div class="card">
+    <div class="card1">
         <img src="KUMAR BHANDARI.webp" alt="" class="img">
-        <h2 class="name">KUMAR BHANDARI</h2>
+        <h2 class="name1">KUMAR BHANDARI</h2>
         <h3 class="type">NON-TEACHING STAFF</h3>
-        <button class="btn">View More</button>
+        <button class="btn"><a href="#KUMAR BHANDARI">View More</a></button>
     </div>
 </main>
 <br>
 
+<div clas="sub-main">
+
+    <div class="slide-container">
+    <button class="slide-btn prev-btn">&#10094;</button>
+    <button class="slide-btn next-btn">&#10095;</button>
+
+    <div class="slide-content">
+      <div class="card-wrapper" id="cardWrapper">
+        
+        <!-- Card 1 -->
+        <div class="card">
+          <div class="image-content">
+            <span class="overlay"></span>
+            <div class="card-image">
+              <img src="DURGA D DAHAL.webp" class="card-img">
+            </div>
+          </div>
+          <div class="card-content" id="DURGA D DAHAL">
+            <h2 class="name">DURGA D DAHAL</h2>
+            <p class="QUALIFICATION">EDUCATIONAL QUALIFICATION: MA, MPHIL</p>
+            <p class="PROFESSIONAL">PROFESSIONAL QUALIFICATION: BED</p>
+            <p class="DATE">DATE OF JOINING: 08 JULY 2025</p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+          <div class="image-content">
+            <span class="overlay"></span>
+            <div class="card-image">
+              <img src="ATINA SUBBA.webp" class="card-img">
+            </div>
+          </div>
+          <div class="card-content" id="ATINA SUBBA">
+            <h2 class="name">ATINA SUBBA</h2>
+            <p class="QUALIFICATION">EDUCATIONAL QUALIFICATION: BSC</p>
+            <p class="PROFESSIONAL">PROFESSIONAL QUALIFICATION: B.Ed</p>
+            <p class="DATE">DATE OF JOINING: 05 MARCH 2012</p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+          <div class="image-content">
+            <span class="overlay"></span>
+            <div class="card-image">
+              <img src="YADHU PRASHAD MISHRA.webp" class="card-img">
+            </div>
+          </div>
+          <div class="card-content" id="YADHU PRASHAD MISHRA">
+            <h2 class="name">YADHU PRASHAD MISHRA</h2>
+            <p class="QUALIFICATION">EDUCATIONAL QUALIFICATION: MSC</p>
+            <p class="PROFESSIONAL">PROFESSIONAL QUALIFICATION: B.Ed</p>
+            <p class="DATE">DATE OF JOINING: 20 SEPTEMBER 2022</p>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card">
+          <div class="image-content">
+            <span class="overlay"></span>
+            <div class="card-image">
+              <img src="KALPANA PRADHAN.webp" class="card-img">
+            </div>
+          </div>
+          <div class="card-content" id="KALPANA PRADHAN">
+            <h2 class="name">KALPANA PRADHAN</h2>
+            <p class="QUALIFICATION">EDUCATIONAL QUALIFICATION: XII</p>
+            <p class="PROFESSIONAL">PROFESSIONAL QUALIFICATION: CPE</p>
+            <p class="DATE">DATE OF JOINING: 17 MAY 2023</p>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="card">
+          <div class="image-content">
+            <span class="overlay"></span>
+            <div class="card-image">
+              <img src="GOPAL PRASAD SHARMA.webp" class="card-img">
+            </div>
+          </div>
+          <div class="card-content" id="GOPAL PRASAD SHARMA">
+            <h2 class="name">GOPAL PRASAD SHARMA</h2>
+            <p class="QUALIFICATION">EDUCATIONAL QUALIFICATION: XII PASSED</p>
+            <p class="PROFESSIONAL">PROFESSIONAL QUALIFICATION: CPE</p>
+            <p class="DATE">DATE OF JOINING: 16 DECEMBER 2021</p>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="card">
+          <div class="image-content">
+            <span class="overlay"></span>
+            <div class="card-image">
+              <img src="DAMBER KUMARI SHARMA.webp" class="card-img">
+            </div>
+          </div>
+          <div class="card-content" id="DAMBER KUMARI SHARMA">
+            <h2 class="name">DAMBER KUMARI SHARMA</h2>
+            <p class="QUALIFICATION">EDUCATIONAL QUALIFICATION: BA</p>
+            <p class="PROFESSIONAL">PROFESSIONAL QUALIFICATION: D.EL.Ed</p>
+            <p class="DATE">DATE OF JOINING: 24 MARCH 2011</p>
+          </div>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="card">
+          <div class="image-content">
+            <span class="overlay"></span>
+            <div class="card-image">
+              <img src="DIL KUMARI SHARMA.webp" class="card-img">
+            </div>
+          </div>
+          <div class="card-content" id="DIL KUMARI SHARMA">
+            <h2 class="name">DIL KUMARI SHARMA</h2>
+            <p class="QUALIFICATION">EDUCATIONAL QUALIFICATION: MA</p>
+            <p class="PROFESSIONAL">PROFESSIONAL QUALIFICATION: D.EL.Ed / TET</p>
+            <p class="DATE">DATE OF JOINING: 23 SEPTEMBER 2020</p>
+          </div>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="card">
+          <div class="image-content">
+            <span class="overlay"></span>
+            <div class="card-image">
+              <img src="BISHNU MAYA SHARMA.webp" class="card-img">
+            </div>
+          </div>
+          <div class="card-content" id="BISHNU MAYA SHARMA">
+            <h2 class="name">BISHNU MAYA SHARMA</h2>
+            <p class="QUALIFICATION">EDUCATIONAL QUALIFICATION: M.A SANSKRIT</p>
+            <p class="PROFESSIONAL">PROFESSIONAL QUALIFICATION: NA</p>
+            <p class="DATE">DATE OF JOINING: 16 OCTOBER 2020</p>
+          </div>
+        </div>
+
+        <!-- Card 9 -->
+        <div class="card">
+          <div class="image-content">
+            <span class="overlay"></span>
+            <div class="card-image">
+              <img src="LEELA DEVI MISHRA.webp" class="card-img">
+            </div>
+          </div>
+          <div class="card-content" id="LEELA DEVI MISHRA">
+            <h2 class="name">LEELA DEVI MISHRA</h2>
+            <p class="QUALIFICATION">EDUCATIONAL QUALIFICATION: MA</p>
+            <p class="PROFESSIONAL">PROFESSIONAL QUALIFICATION: B.Ed</p>
+            <p class="DATE">DATE OF JOINING: 10 MARCH 2010S</p>
+          </div>
+        </div>
+
+        <!-- Card 10 -->
+        <div class="card">
+          <div class="image-content">
+            <span class="overlay"></span>
+            <div class="card-image">
+              <img src="PARSU RAM SHARMA.webp" class="card-img">
+            </div>
+          </div>
+          <div class="card-content" id="PARSU RAM SHARMA">
+            <h2 class="name">PARSU RAM SHARMA</h2>
+            <p class="QUALIFICATION">EDUCATIONAL QUALIFICATION: MA</p>
+            <p class="PROFESSIONAL">PROFESSIONAL QUALIFICATION: BED</p>
+            <p class="DATE">DATE OF JOINING: 01 APRIL 2022</p>
+          </div>
+        </div>
+
+        <!-- Card 11 -->
+        <div class="card">
+          <div class="image-content">
+            <span class="overlay"></span>
+            <div class="card-image">
+              <img src="BHANU GURUNG.webp" class="card-img">
+            </div>
+          </div>
+          <div class="card-content" id="BHANU GURUNG">
+            <h2 class="name">BHANU GURUNG</h2>
+            <p class="QUALIFICATION">EDUCATIONAL QUALIFICATION: BA</p>
+            <p class="PROFESSIONAL">PROFESSIONAL QUALIFICATION: B.Ed</p>
+            <p class="DATE">DATE OF JOINING: 20 JANUARY 2025</p>
+          </div>
+        </div>
+
+        <!-- Card 12 -->
+        <div class="card">
+          <div class="image-content">
+            <span class="overlay"></span>
+            <div class="card-image">
+              <img src="SACHIN GURUNG.webp" class="card-img">
+            </div>
+          </div>
+          <div class="card-content" id="SACHIN GURUNG">
+            <h2 class="name">SACHIN GURUNG</h2>
+            <p class="QUALIFICATION">EDUCATIONAL QUALIFICATION: MA. POL. SC</p>
+            <p class="PROFESSIONAL">PROFESSIONAL QUALIFICATION: B.Ed (HL SPL/EDN)</p>
+            <p class="DATE">DATE OF JOINING: 16 NOVEMBER 2021</p>
+          </div>
+        </div>
+
+        <!-- Card 13 -->
+        <div class="card">
+          <div class="image-content">
+            <span class="overlay"></span>
+            <div class="card-image">
+              <img src="MINGMA CHOTEN SHERPA.webp" class="card-img">
+            </div>
+          </div>
+          <div class="card-content" id="MINGMA CHOTEN SHERPA">
+            <h2 class="name">MINGMA CHOTEN SHERPA</h2>
+            <p class="QUALIFICATION">EDUCATIONAL QUALIFICATION: MA</p>
+            <p class="PROFESSIONAL">PROFESSIONAL QUALIFICATION: D.EL.Ed</p>
+            <p class="DATE">DATE OF JOINING: 01 AUGUST 2008</p>
+          </div>
+        </div>
+
+        <!-- Card 14 -->
+        <div class="card">
+          <div class="image-content">
+            <span class="overlay"></span>
+            <div class="card-image">
+              <img src="PRANITA RIZAL.webp" class="card-img">
+            </div>
+          </div>
+          <div class="card-content" id="PRANITA RIZAL">
+            <h2 class="name">PRANITA RIZAL</h2>
+            <p class="QUALIFICATION">EDUCATIONAL QUALIFICATION: BA</p>
+            <p class="PROFESSIONAL">PROFESSIONAL QUALIFICATION: D.EL.Ed / B.Ed</p>
+            <p class="DATE">DATE OF JOINING: 23 SEPETEMBER 2024</p>
+          </div>
+        </div>
+
+        <!-- Card 15 -->
+        <div class="card">
+          <div class="image-content">
+            <span class="overlay"></span>
+            <div class="card-image">
+              <img src="HEMANTH SUBBA.webp" class="card-img">
+            </div>
+          </div>
+          <div class="card-content" id="HEMANTH SUBBA">
+            <h2 class="name">HEMANTH SUBBA</h2>
+            <p class="QUALIFICATION">EDUCATIONAL QUALIFICATION: BSC</p>
+            <p class="PROFESSIONAL">PROFESSIONAL QUALIFICATION: D.EL.Ed</p>
+            <p class="DATE">DATE OF JOINING: 11 SEPETEMBER 2024</p>
+          </div>
+        </div>
+
+        <!-- Card 16 -->
+        <div class="card">
+          <div class="image-content">
+            <span class="overlay"></span>
+            <div class="card-image">
+              <img src="KAVITA NIROLA.webp" class="card-img">
+            </div>
+          </div>
+          <div class="card-content" id="KAVITA NIROLA">
+            <h2 class="name">KAVITA NIROLA</h2>
+            <p class="QUALIFICATION">EDUCATIONAL QUALIFICATION: MA</p>
+            <p class="PROFESSIONAL">PROFESSIONAL QUALIFICATION: B.Ed / TET</p>
+            <p class="DATE">DATE OF JOINING: 14 OCTOBER 2020</p>
+          </div>
+        </div>
+
+        <!-- Card 17 -->
+        <div class="card">
+          <div class="image-content">
+            <span class="overlay"></span>
+            <div class="card-image">
+              <img src="JANUKA THAPA CHETTRI.webp" class="card-img">
+            </div>
+          </div>
+          <div class="card-content" id="JANUKA THAPA CHETTRI">
+            <h2 class="name">JANUKA THAPA CHETTRI</h2>
+            <p class="QUALIFICATION">EDUCATIONAL QUALIFICATION: XII PASSED</p>
+            <p class="PROFESSIONAL">PROFESSIONAL QUALIFICATION: D.EL.ED</p>
+            <p class="DATE">DATE OF JOINING: 06 AUGUST 2022</p>
+          </div>
+        </div>
+
+        <!-- Card 18 -->
+        <div class="card">
+          <div class="image-content">
+            <span class="overlay"></span>
+            <div class="card-image">
+              <img src="TSHERING LHAMU SHERPA.webp" class="card-img">
+            </div>
+          </div>
+          <div class="card-content" id="TSHERING LHAMU SHERPA">
+            <h2 class="name">TSHERING LHAMU SHERPA</h2>
+            <p class="QUALIFICATION">EDUCATIONAL QUALIFICATION: B.TECH</p>
+            <p class="PROFESSIONAL">PROFESSIONAL QUALIFICATION: NA</p>
+            <p class="DATE">DATE OF JOINING: 10 DECEMBER 2021</p>
+          </div>
+        </div>
+
+        <!-- Card 19 -->
+        <div class="card">
+          <div class="image-content">
+            <span class="overlay"></span>
+            <div class="card-image">
+              <img src="KARISHMA CHETTRI.webp" class="card-img">
+            </div>
+          </div>
+          <div class="card-content" id="KARISHMA CHETTRI">
+            <h2 class="name">KARISHMA CHETTRI</h2>
+            <p class="QUALIFICATION">EDUCATIONAL QUALIFICATION: BA / MSC IT</p>
+            <p class="PROFESSIONAL">PROFESSIONAL QUALIFICATION: BED</p>
+            <p class="DATE">DATE OF JOINING: 04 MAY 2022</p>
+          </div>
+        </div>
+
+        <!-- Card 20 -->
+        <div class="card">
+          <div class="image-content">
+            <span class="overlay"></span>
+            <div class="card-image">
+              <img src="MANYLUM TSHERING LEPCHA.webp" class="card-img">
+            </div>
+          </div>
+          <div class="card-content" id="MANYLUM TSHERING LEPCHA">
+            <h2 class="name">MANYLUM TSHERING LEPCHA</h2>
+            <p class="QUALIFICATION">EDUCATIONAL QUALIFICATION: M.SC</p>
+            <p class="PROFESSIONAL">PROFESSIONAL QUALIFICATION: B.Ed</p>
+            <p class="DATE">DATE OF JOINING: 09 APRIL 2025</p>
+          </div>
+        </div>
+
+        <!-- Card 21 -->
+        <div class="card">
+          <div class="image-content">
+            <span class="overlay"></span>
+            <div class="card-image">
+              <img src="LALIMAYA MANGAR.webp" class="card-img">
+            </div>
+          </div>
+          <div class="card-content" id="LALIMAYA MANGAR">
+            <h2 class="name">LALIMAYA MANGAR</h2>
+            <p class="QUALIFICATION">EDUCATIONAL QUALIFICATION: BA</p>
+            <p class="PROFESSIONAL">PROFESSIONAL QUALIFICATION: B.P.ED</p>
+            <p class="DATE">DATE OF JOINING: 10 MAY 2022</p>
+          </div>
+        </div>
+
+        <!-- Card 22 -->
+        <div class="card">
+          <div class="image-content">
+            <span class="overlay"></span>
+            <div class="card-image">
+              <img src="BUDDHA BIR SUBBA.webp" class="card-img">
+            </div>
+          </div>
+          <div class="card-content" id="BUDDHA BIR SUBBA">
+            <h2 class="name">BUDDHA BIR SUBBA</h2>
+            <p class="QUALIFICATION">EDUCATIONAL QUALIFICATION: X PASSED</p>
+            <p class="PROFESSIONAL">PROFESSIONAL QUALIFICATION: NA</p>
+            <p class="DATE">DATE OF JOINING:  22 SEPETEMBER 2001</p>
+          </div>
+        </div>
+
+        <!-- Card 23 -->
+        <div class="card">
+          <div class="image-content">
+            <span class="overlay"></span>
+            <div class="card-image">
+              <img src="SUSMA PRADHAN.webp" class="card-img">
+            </div>
+          </div>
+          <div class="card-content" id="SUSMA PRADHAN">
+            <h2 class="name">SUSMA PRADHAN</h2>
+            <p class="QUALIFICATION">EDUCATIONAL QUALIFICATION:  XII PASSED</p>
+            <p class="PROFESSIONAL">PROFESSIONAL QUALIFICATION: NA</p>
+            <p class="DATE">DATE OF JOINING:  24 JUNE 2017</p>
+          </div>
+        </div>
+
+        <!-- Card 24 -->
+        <div class="card">
+          <div class="image-content">
+            <span class="overlay"></span>
+            <div class="card-image">
+              <img src="MAN BAHADUR BARAILY.webp" class="card-img">
+            </div>
+          </div>
+          <div class="card-content" id="MAN BAHADUR BARAILY">
+            <h2 class="name">MAN BAHADUR BARAILY</h2>
+            <p class="QUALIFICATION">EDUCATIONAL QUALIFICATION: BA / MSC IT</p>
+            <p class="PROFESSIONAL">PROFESSIONAL QUALIFICATION: NA</p>
+            <p class="DATE">DATE OF JOINING: 28 AUGUST 2019</p>
+          </div>
+        </div>
+
+        <!-- Card 25 -->
+        <div class="card">
+          <div class="image-content">
+            <span class="overlay"></span>
+            <div class="card-image">
+              <img src="MEENU LOHAR.webp" class="card-img">
+            </div>
+          </div>
+          <div class="card-content" id="MEENU LOHAR">
+            <h2 class="name">MEENU LOHAR</h2>
+            <p class="QUALIFICATION">EDUCATIONAL QUALIFICATION: X PASSED</p>
+            <p class="PROFESSIONAL">PROFESSIONAL QUALIFICATION: NA</p>
+            <p class="DATE">DATE OF JOINING: 12 NOVEMBER 2008</p>
+          </div>
+        </div>
+
+        <!-- Card 26 -->
+        <div class="card">
+          <div class="image-content">
+            <span class="overlay"></span>
+            <div class="card-image">
+              <img src="CHANDRA KALA SHARMA.webp" class="card-img">
+            </div>
+          </div>
+          <div class="card-content" id="CHANDRA KALA SHARMA">
+            <h2 class="name">CHANDRA KALA SHARMA</h2>
+            <p class="QUALIFICATION">EDUCATIONAL QUALIFICATION: X</p>
+            <p class="PROFESSIONAL">PROFESSIONAL QUALIFICATION: NA</p>
+            <p class="DATE">DATE OF JOINING: 15 MARCH 2024</p>
+          </div>
+        </div>
+
+        <!-- Card 27 -->
+        <div class="card">
+          <div class="image-content">
+            <span class="overlay"></span>
+            <div class="card-image">
+              <img src="CHANDRA MADAN GURUNG.webp" class="card-img">
+            </div>
+          </div>
+          <div class="card-content" id="CHANDRA MADAN GURUNG">
+            <h2 class="name">CHANDRA MADAN GURUNG</h2>
+            <p class="QUALIFICATION">EDUCATIONAL QUALIFICATION: XII PASSED</p>
+            <p class="PROFESSIONAL">PROFESSIONAL QUALIFICATION: NA</p>
+            <p class="DATE">DATE OF JOINING: 12 FEBRUARY 2017</p>
+          </div>
+        </div>
+
+        <!-- Card 28 -->
+        <div class="card">
+          <div class="image-content">
+            <span class="overlay"></span>
+            <div class="card-image">
+              <img src="SUNAINA CHETTRI.webp" class="card-img">
+            </div>
+          </div>
+          <div class="card-content" id="SUNAINA CHETTRI">
+            <h2 class="name">SUNAINA CHETTRI</h2>
+            <p class="QUALIFICATION">EDUCATIONAL QUALIFICATION: XII</p>
+            <p class="PROFESSIONAL">PROFESSIONAL QUALIFICATION: NA</p>
+            <p class="DATE">DATE OF JOINING: 23 AUGUST 2024</p>
+          </div>
+        </div>
+
+        <!-- Card 29 -->
+        <div class="card">
+          <div class="image-content">
+            <span class="overlay"></span>
+            <div class="card-image">
+              <img src="MEENA CHETTRI.webp" class="card-img">
+            </div>
+          </div>
+          <div class="card-content" id="MEENA CHETTRI">
+            <h2 class="name">MEENA CHETTRI</h2>
+            <p class="QUALIFICATION">EDUCATIONAL QUALIFICATION: MA</p>
+            <p class="PROFESSIONAL">PROFESSIONAL QUALIFICATION: NA</p>
+            <p class="DATE">DATE OF JOINING: 26 APRIL 2016</p>
+          </div>
+        </div>
+
+        <!-- Card 30 -->
+        <div class="card">
+          <div class="image-content">
+            <span class="overlay"></span>
+            <div class="card-image">
+              <img src="ANURADHA SHARNM.webp" class="card-img">
+            </div>
+          </div>
+          <div class="card-content" id="ANURADHA SHARNMA">
+            <h2 class="name">ANURADHA SHARNMA</h2>
+            <p class="QUALIFICATION">EDUCATIONAL QUALIFICATION: X</p>
+            <p class="PROFESSIONAL">PROFESSIONAL QUALIFICATION: NA</p>
+            <p class="DATE">DATE OF JOINING: 11 MARCH 2024</p>
+          </div>
+        </div>
+
+        <!-- Card 31 -->
+        <div class="card">
+          <div class="image-content">
+            <span class="overlay"></span>
+            <div class="card-image">
+              <img src="PANTU GURUNG.webp" class="card-img">
+            </div>
+          </div>
+          <div class="card-content" id="PANTU GURUNG">
+            <h2 class="name">PANTU GURUNG</h2>
+            <p class="QUALIFICATION">EDUCATIONAL QUALIFICATION: XII</p>
+            <p class="PROFESSIONAL">PROFESSIONAL QUALIFICATION: NA</p>
+            <p class="DATE">DATE OF JOINING:  01 MARCH 2024</p>
+          </div>
+        </div>
+
+        <!-- Card 32 -->
+        <div class="card">
+          <div class="image-content">
+            <span class="overlay"></span>
+            <div class="card-image">
+              <img src="TIKA DEVI SHARMA.webp" class="card-img">
+            </div>
+          </div>
+          <div class="card-content" id="TIKA DEVI SHARMA">
+            <h2 class="name">TIKA DEVI SHARMA</h2>
+            <p class="QUALIFICATION">EDUCATIONAL QUALIFICATION: VIII</p>
+            <p class="PROFESSIONAL">PROFESSIONAL QUALIFICATION: NA</p>
+            <p class="DATE">DATE OF JOINING: </p>
+          </div>
+        </div>
+
+        <!-- Card 33 -->
+        <div class="card">
+          <div class="image-content">
+            <span class="overlay"></span>
+            <div class="card-image">
+              <img src="DAMBER KUMARI CHETTRI.webp" class="card-img">
+            </div>
+          </div>
+          <div class="card-content" id="DAMBER KUMARI CHETTRI">
+            <h2 class="name">DAMBER KUMARI CHETTRI</h2>
+            <p class="QUALIFICATION">EDUCATIONAL QUALIFICATION: VIII</p>
+            <p class="PROFESSIONAL">PROFESSIONAL QUALIFICATION: NA</p>
+            <p class="DATE">DATE OF JOINING: 15 MARCH 2024</p>
+          </div>
+        </div>
+
+        <!-- Card 34 -->
+        <div class="card">
+          <div class="image-content">
+            <span class="overlay"></span>
+            <div class="card-image">
+              <img src="BINU GURUNG.webp" class="card-img">
+            </div>
+          </div>
+          <div class="card-content" id="BINU GURUNG">
+            <h2 class="name">BINU GURUNG</h2>
+            <p class="QUALIFICATION">EDUCATIONAL QUALIFICATION: M.COM</p>
+            <p class="PROFESSIONAL">PROFESSIONAL QUALIFICATION: NA</p>
+            <p class="DATE">DATE OF JOINING: 16 MARCH 2024</p>
+          </div>
+        </div>
+
+        <!-- Card 35 -->
+        <div class="card">
+          <div class="image-content">
+            <span class="overlay"></span>
+            <div class="card-image">
+              <img src="RAM CHANDRA GIRI.webp" class="card-img">
+            </div>
+          </div>
+          <div class="card-content" id="RAM CHANDRA GIRI">
+            <h2 class="name">RAM CHANDRA GIRI</h2>
+            <p class="QUALIFICATION">EDUCATIONAL QUALIFICATION: B.COM</p>
+            <p class="PROFESSIONAL">PROFESSIONAL QUALIFICATION: NA</p>
+            <p class="DATE">DATE OF JOINING: 18 MARCH 2024</p>
+          </div>
+        </div>
+
+        <!-- Card 36 -->
+        <div class="card">
+          <div class="image-content">
+            <span class="overlay"></span>
+            <div class="card-image">
+              <img src="PRANISHA SHARMA.webp" class="card-img">
+            </div>
+          </div>
+          <div class="card-content" id="PRANISHA SHARMA">
+            <h2 class="name">PRANISHA SHARMA</h2>
+            <p class="QUALIFICATION">EDUCATIONAL QUALIFICATION: BA</p>
+            <p class="PROFESSIONAL">PROFESSIONAL QUALIFICATION: NA</p>
+            <p class="DATE">DATE OF JOINING: 14 JANUARY 2019</p>
+          </div>
+        </div>
+
+        <!-- Card 37 -->
+        <div class="card">
+          <div class="image-content">
+            <span class="overlay"></span>
+            <div class="card-image">
+              <img src="ANNIE THAPA.webp" class="card-img">
+            </div>
+          </div>
+          <div class="card-content" id="ANNIE THAPA">
+            <h2 class="name">ANNIE THAPA</h2>
+            <p class="QUALIFICATION">EDUCATIONAL QUALIFICATION: M.COM</p>
+            <p class="PROFESSIONAL">PROFESSIONAL QUALIFICATION: NA</p>
+            <p class="DATE">DATE OF JOINING: 15 MARCH 2024</p>
+          </div>
+        </div>
+
+        <!-- Card 38 -->
+        <div class="card">
+          <div class="image-content">
+            <span class="overlay"></span>
+            <div class="card-image">
+              <img src="RANJANA TAMANG.webp" class="card-img">
+            </div>
+          </div>
+          <div class="card-content" id="RANJANA TAMANG">
+            <h2 class="name">RANJANA TAMANG</h2>
+            <p class="QUALIFICATION">EDUCATIONAL QUALIFICATION: XII</p>
+            <p class="PROFESSIONAL">PROFESSIONAL QUALIFICATION: NA</p>
+            <p class="DATE">DATE OF JOINING: 18 MAY 2023</p>
+          </div>
+        </div>
+
+        <!-- Card 39 -->
+        <div class="card">
+          <div class="image-content">
+            <span class="overlay"></span>
+            <div class="card-image">
+              <img src="NIHAL PRADHAN.webp" class="card-img">
+            </div>
+          </div>
+          <div class="card-content" id="NIHAL PRADHAN">
+            <h2 class="name">NIHAL PRADHAN</h2>
+            <p class="QUALIFICATION">EDUCATIONAL QUALIFICATION: BSC</p>
+            <p class="PROFESSIONAL">PROFESSIONAL QUALIFICATION: NA</p>
+            <p class="DATE">DATE OF JOINING: 01 JULY 2024</p>
+          </div>
+        </div>
+
+        <!-- Card 40 -->
+        <div class="card">
+          <div class="image-content">
+            <span class="overlay"></span>
+            <div class="card-image">
+              <img src="KUMAR BHANDARI.webp" class="card-img">
+            </div>
+          </div>
+          <div class="card-content" id="KUMAR BHANDARI">
+            <h2 class="name">KUMAR BHANDARI</h2>
+            <p class="QUALIFICATION">EDUCATIONAL QUALIFICATION: VIII PASSED</p>
+            <p class="PROFESSIONAL">PROFESSIONAL QUALIFICATION: NA</p>
+            <p class="DATE">DATE OF JOINING: 14 JANUARY 2019</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const cardWrapper = document.getElementById("cardWrapper");
+    const prevBtn = document.querySelector(".prev-btn");
+    const nextBtn = document.querySelector(".next-btn");
+
+    let scrollAmount = 0;
+    const cardWidth = 340; // card width + gap
+
+    nextBtn.addEventListener("click", () => {
+      scrollAmount += cardWidth;
+      if (scrollAmount > cardWrapper.scrollWidth - cardWrapper.clientWidth) {
+        scrollAmount = cardWrapper.scrollWidth - cardWrapper.clientWidth;
+      }
+      cardWrapper.style.transform = `translateX(-${scrollAmount}px)`;
+    });
+
+    prevBtn.addEventListener("click", () => {
+      scrollAmount -= cardWidth;
+      if (scrollAmount < 0) scrollAmount = 0;
+      cardWrapper.style.transform = `translateX(-${scrollAmount}px)`;
+    });
+  </script>
+
+
+</div>
+<br>
 <footer>
     <p>RBGGSST</p>
 
@@ -541,9 +1364,9 @@
             <b><i>ABHINAY PRADHAN</i></b>
         </a>
         FOR INFORMATIONAL PURPOSE ONLY
+        
     </p>
 </footer>
 
 </body>
 </html>
-
