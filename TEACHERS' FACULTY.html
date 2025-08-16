@@ -365,6 +365,47 @@
       animation-timeline: view();
       animation-range: entry 0 cover 40%;
   }
+    /* Smooth scroll effect */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Scroll to top button */
+    .scroll-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: linear-gradient(45deg, #ff416c, #ff4b2b);
+      color: #fff;
+      padding: 15px 20px;
+      border-radius: 50%;
+      font-size: 20px;
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+      animation: bounce 2s infinite;
+    }
+
+    /* Hover effect */
+    .scroll-to-top:hover {
+      background: linear-gradient(45deg, #1e90ff, #00bfff);
+      transform: scale(1.1);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Button bounce animation */
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-5px);
+      }
+    }
+
     </style>
 </head>
 <body>
@@ -1355,6 +1396,9 @@
       cardWrapper.style.transform = `translateX(-${scrollAmount}px)`;
     });
   </script>
+
+  <!-- Scroll to top button -->
+  <a href="#top" class="scroll-to-top">↑</a>
 
 
 </div>
