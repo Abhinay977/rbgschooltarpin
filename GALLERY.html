@@ -59,17 +59,66 @@
             max-height: 80%;
             border-radius: 8px;
         }
+
+        /* Animated Buttons */
         .lightbox .close, .lightbox .prev, .lightbox .next {
             position: absolute;
+            background: linear-gradient(45deg, #ff416c, #ff4b2b);
+            padding: 15px;
+            border-radius: 50%;
             color: white;
-            font-size: 2rem;
+            font-size: 1.8rem;
             cursor: pointer;
             user-select: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+            animation: pulse 2s infinite;
         }
+
         .lightbox .close { top: 20px; right: 30px; }
         .lightbox .prev { left: 30px; top: 50%; transform: translateY(-50%); }
         .lightbox .next { right: 30px; top: 50%; transform: translateY(-50%); }
-        .lightbox .prev:hover, .lightbox .next:hover, .lightbox .close:hover { color: #f9a825; }
+
+        .lightbox .prev:hover, .lightbox .next:hover, .lightbox .close:hover {
+            background: linear-gradient(45deg, #1e90ff, #00bfff);
+            transform: scale(1.2);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        /* Scroll to top button */
+        html { scroll-behavior: smooth; }
+        .scroll-to-top {
+          position: fixed;
+          bottom: 20px;
+          right: 20px;
+          background: linear-gradient(45deg, #ff416c, #ff4b2b);
+          color: #fff;
+          padding: 15px 20px;
+          border-radius: 50%;
+          font-size: 20px;
+          text-decoration: none;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+          transition: all 0.3s ease;
+          animation: bounce 2s infinite;
+        }
+        .scroll-to-top:hover {
+          background: linear-gradient(45deg, #1e90ff, #00bfff);
+          transform: scale(1.1);
+          box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+        }
+        @keyframes bounce {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-5px); }
+        }
     </style>
 </head>
 <body>
@@ -126,6 +175,9 @@
     <img id="lightboxImg" src="">
     <span class="next" id="nextBtn">&#10095;</span>
 </div>
+
+<!-- Scroll to top button -->
+<a href="#top" class="scroll-to-top">↑</a>
 
 <footer>
     <br>RBGGSST<br>
@@ -186,4 +238,3 @@
 
 </body>
 </html>
-
