@@ -1,237 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ratna Bdr. Gurung Govt. Secondary School</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ratna Bdr. Gurung Govt. Secondary School</title>
 
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" 
-          integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" 
-          crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" 
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Open Sans', sans-serif;
-        }
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Open Sans', sans-serif;
+    }
 
-        body {
-            background-color: #002B36;
-            color: #FAFAFA;
-            font-size: 16px;
-            padding: 15px;
-            text-align: center;
-            line-height: 1.6;
-        }
+    body {
+      background: #002B36;
+      color: #FAFAFA;
+      font-size: 16px;
+      padding: 15px;
+      text-align: center;
+      line-height: 1.6;
+      overflow-x: hidden;
+      animation: fadeInBody 1.2s ease-in-out;
+    }
 
-        .line {
-            width: auto;
-            height: 2px;
-            background-color: #f9a825;
-            margin: 20px auto;
-        }
+    @keyframes fadeInBody {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
 
-        li {
-            list-style: none;
-        }
+    a { 
+      color: #00BCD4; 
+      text-decoration: none; 
+      transition: all 0.3s ease;
+    } 
+    a:hover { color: #FFB300; transform: scale(1.1); }
 
-        a {
-            color: #FAFAFA;
-            text-decoration: none;
-            font-size: 1rem;
-        }
+    header {
+      padding: 0 2rem;
+      animation: slideDown 1s ease;
+    }
 
-        a:hover {
-            color: #f9a825;
-        }
+    @keyframes slideDown {
+      from {transform: translateY(-80px); opacity: 0;}
+      to {transform: translateY(0); opacity: 1;}
+    }
 
-        header {
-            position: relative;
-            padding: 0 2rem;
-        }
+    /* Navbar */
+    .navbar {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
 
-        .navbar {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
+    .navbar .logo a {
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #FAFAFA;
+      transition: all 0.3s ease;
+    }
+    .navbar .logo a:hover {
+      color: #FFB300;
+      letter-spacing: 2px;
+    }
 
-        .navbar .logo a {
-            font-size: 1.2rem;
-            font-weight: bold;
-        }
+    .navbar .links {
+      display: flex;
+      gap: 2rem;
+      animation: fadeIn 1.5s ease;
+    }
 
-        /* Links for large screens */
-        .navbar .links {
-            display: flex;
-            gap: 2rem;
-        }
+    li { list-style: none; }
+    .links a { color: #FAFAFA; font-weight: 500; transition: all 0.3s ease; }
+    .links a:hover { color: #FFB300; transform: translateY(-3px); }
 
-        /* Hide the checkbox */
-        #menu-toggle {
-            display: none;
-        }
+    /* Hamburger */
+    #menu-toggle { display: none; }
+    .menu-icon {
+      display: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: white;
+      background: linear-gradient(45deg, #00BCD4, #f9a825);
+      padding: 10px 14px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.3);
+    }
+    .menu-icon:hover {
+      background: linear-gradient(45deg, #ff6f00, #f9a825);
+      transform: scale(1.1) rotate(10deg);
+    }
+    #menu-toggle:checked + .menu-icon {
+      background: linear-gradient(45deg, #43A047, #2E7D32);
+      transform: rotate(90deg);
+    }
 
-        /* Creative Hamburger Button */
-        .menu-icon {
-            display: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: white;
-            background: linear-gradient(45deg, #f9a825, #ff6f00);
-            padding: 10px 14px;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            box-shadow: 0px 4px 8px rgba(0,0,0,0.3);
-        }
+    /* Mobile Menu */
+    @media (max-width: 768px) {
+      .navbar .links {
+        display: none;
+        flex-direction: column;
+        background-color: #013844;
+        position: absolute;
+        top: 60px;
+        right: 2rem;
+        width: 200px;
+        padding: 1rem;
+        border-radius: 10px;
+        gap: 1rem;
+        z-index: 100;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+        animation: fadeIn 0.5s ease;
+      }
+      #menu-toggle:checked + .menu-icon + .links { display: flex; }
+      .menu-icon { display: block; }
+    }
 
-        .menu-icon:hover {
-            background: linear-gradient(45deg, #ff6f00, #f9a825);
-            transform: scale(1.1);
-        }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
 
-        /* Active effect when menu is open */
-        #menu-toggle:checked + .menu-icon {
-            background: linear-gradient(45deg, #4caf50, #2e7d32);
-            color: white;
-            transform: rotate(90deg);
-        }
+    /* Cards */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin: 30px auto;
+      max-width: 1200px;
+    }
 
-        /* ===== MOBILE MENU ===== */
-        @media (max-width: 768px) {
-            .navbar .links {
-                display: none;
-                flex-direction: column;
-                background-color: #002B36;
-                position: absolute;
-                top: 60px;
-                right: 2rem;
-                width: 200px;
-                padding: 1rem;
-                border-radius: 10px;
-                gap: 1rem;
-                z-index: 100;
-                box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-                animation: fadeIn 0.3s ease;
-            }
+    .card {
+      background: linear-gradient(135deg, #004D40, #00ACC1);
+      padding: 20px;
+      border-radius: 15px;
+      color: white;
+      text-align: left;
+      box-shadow: 0px 6px 15px rgba(0,0,0,0.3);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      animation: fadeUp 1s ease forwards;
+      opacity: 0;
+    }
 
-            /* Show menu when checkbox is checked */
-            #menu-toggle:checked + .menu-icon + .links {
-                display: flex;
-            }
+    .card h1 {
+      color: #FFB300;
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+    }
 
-            .menu-icon {
-                display: block;
-            }
-        }
+    .card p {
+      font-size: 1rem;
+      margin-bottom: 8px;
+      color: #E0F7FA;
+    }
 
-        /* Smooth Fade-in Animation */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+    .card:hover {
+      transform: translateY(-12px) scale(1.04);
+      box-shadow: 0px 14px 28px rgba(0,0,0,0.6);
+    }
 
-        /* Icon styling */
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 30px;
-            margin-top: 10px;
-        }
+    @keyframes fadeUp {
+      from { transform: translateY(40px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
 
-        .facebook i {
-            font-size: 2rem;
-            color: #1877F2;
-            transition: color 0.3s ease;
-        }
+    /* Footer */
+    footer {
+      margin-top: 50px;
+      padding: 20px;
+      background: #004D40;
+      border-radius: 12px;
+      color: #E0F7FA;
+    }
 
-        .facebook i:hover {
-            color: #f9a825;
-        }
+    footer p a { color: #FFB300; transition: all 0.3s ease; }
+    footer p a:hover { color: #00BCD4; text-shadow: 0 0 8px #00BCD4; }
 
-        .call i {
-            font-size: 2rem;
-            color: #4CAF50;
-            transition: color 0.3s ease;
-        }
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      margin: 15px 0;
+    }
 
-        .call i:hover {
-            color: #f9a825;
-        }
-    </style>
+    .facebook i, .call i { 
+      font-size: 2rem; 
+      transition: 0.4s ease;
+    }
+    .facebook i { color: #1877F2; }
+    .call i { color: #4CAF50; }
+
+    .facebook i:hover, .call i:hover {
+      color: #FFB300; 
+      transform: scale(1.3) rotate(10deg);
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-    <nav class="navbar">
-        <div class="logo"><a href="https://www.facebook.com/share/1EjWCDv4Ub/">RBG GOVERNMENT SECONDARY SCHOOL TARPIN</a></div>
+<header>
+  <nav class="navbar">
+    <div class="logo"><a href="https://www.facebook.com/share/1EjWCDv4Ub/">RBG GOVERNMENT SECONDARY SCHOOL TARPIN</a></div>
 
-        <!-- Hidden checkbox for toggle -->
-        <input type="checkbox" id="menu-toggle">
-        <label for="menu-toggle" class="menu-icon">
-            <i class="fa-solid fa-bars"></i>
-        </label>
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon"><i class="fa-solid fa-bars"></i></label>
 
-        <ul class="links">
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="ABOUT US.html">ABOUT US</a></li>
-            <li><a href="TEACHERS' FACULTY.html">TEACHERS' FACULTY</a></li>
-            <li><a href="GALLERY.html">GALLERY</a></li>
-        </ul>
-    </nav>
+    <ul class="links">
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="ABOUT US.html">ABOUT US</a></li>
+      <li><a href="TEACHERS' FACULTY.html">TEACHERS' FACULTY</a></li>
+      <li><a href="GALLERY.html">GALLERY</a></li>
+    </ul>
+  </nav>
 </header>
-   <nav><h1>OUR HISTOTY</h1>
-        <p>Government Secondary School Tarpin is 58 kilometers away from the capital Gangtok, and is nestled in a rural area in the Pakyong district of Sikkim under the 19 Rhenock constituency, Rongli subdivision, and is looked after by Rhenock BAC. The nearest police station, post office, and CRC are at Rhenock. The school is situated in the heart of 08 Tarpin Gram Panchayat Unit. The school was established in the year 1960.</p>
-    <h1>SCHOOL VISION AND MISSION</h1>
-        <p><b>Vision:</b> To inspire the students to be social, adaptable, resourceful, caring, visionaries, and lastly better human beings.</p>
 
-        <p><b>Mission:</b> To provide the best opportunity for every student to enhance their latent potential, knowledge, and caliber.</p>
+<!-- Cards -->
+<div class="grid-container">
+  <div class="card">
+    <h1>OUR HISTORY</h1>
+    <p>Government Secondary School Tarpin is 58 kilometers away from the capital Gangtok, nestled in a rural area in the Pakyong district of Sikkim under the 19 Rhenock constituency.</p>
+    <p>The school was established in the year 1960 and is situated in the heart of 08 Tarpin Gram Panchayat Unit.</p>
+  </div>
 
-        <p>To monitor and guide them to build a healthy and positive attitude and sincerity towards their work ethics, fellow beings, and community as a whole.</p>
+  <div class="card">
+    <h1>SCHOOL VISION & MISSION</h1>
+    <p><b>Vision:</b> To inspire students to be social, adaptable, resourceful, caring, visionary, and better human beings.</p>
+    <p><b>Mission:</b> To provide the best opportunity for every student to enhance their potential, knowledge, and caliber.</p>
+    <p>The school nurtures responsibility and empathy among students for society.</p>
+  </div>
+</div>
 
-        <p>The school works in creating an individual with a sense of responsibility and empathy.</p></nav>
-
-    <footer>
-<br>
-    <p>RBGGSST</p>
-
-    <div class="social-icons">
-        <div class="facebook">
-            <a href="https://www.facebook.com/share/1EjWCDv4Ub/" target="_blank">
-                <i class="fa-brands fa-facebook"></i>
-            </a>
-        </div>
-        <div class="call">
-            <a href="tel:9239087045">
-                <i class="fa-solid fa-phone"></i>
-            </a>
-        </div>
+<footer>
+  <p>RBGGSST</p>
+  <div class="social-icons">
+    <div class="facebook">
+      <a href="https://www.facebook.com/share/1EjWCDv4Ub/" target="_blank">
+        <i class="fa-brands fa-facebook"></i>
+      </a>
     </div>
-    <p>
-        PAGE DESIGNED BY 
-        <a href="https://wa.me/9239087045" target="_blank">
-            <b><i>ABHINAY PRADHAN</i></b>
-        </a> 
-        FOR INFORMATIONAL PURPOSE ONLY
-    </p>
-    </footer> 
+    <div class="call">
+      <a href="tel:9239087045">
+        <i class="fa-solid fa-phone"></i>
+      </a>
+    </div>
+  </div>
+  <p>PAGE DESIGNED BY 
+    <a href="https://wa.me/9239087045" target="_blank"><b><i>ABHINAY PRADHAN</i></b></a> 
+    FOR INFORMATIONAL PURPOSE ONLY
+  </p>
+</footer>
+
 </body>
 </html>
-
-
-
-
-
